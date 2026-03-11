@@ -66,10 +66,40 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .hero-actions a { display: block !important; width: 100% !important; margin-right: 0 !important; }
-      .footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
-    }
+    @media (max-width: 768px){
+  .hero-actions{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    gap:12px !important;
+  }
+
+  .hero-actions a{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-height:52px !important;
+    padding:0 16px !important;
+    border-radius:12px !important;
+    font-size:15px !important;
+    font-weight:600 !important;
+    text-align:center !important;
+  }
+
+  .academy-hero-content{
+    padding:56px 0 !important;
+  }
+
+  .academy-hero h1{
+    font-size:clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  .academy-hero p{
+    font-size:16px !important;
+    line-height:1.8 !important;
+  }
+}
 
     @media (max-width: 768px){
       .footer-grid{
@@ -768,23 +798,54 @@
 
   <!-- Mobile Menu -->
   <div id="mobileMenuBackdrop" style="position:fixed; inset:0; background:rgba(4,10,20,0.48); opacity:0; pointer-events:none; transition:0.3s ease; z-index:70;"></div>
-  <aside id="mobileSidebar" style="position:fixed; top:0; right:0; width:min(88vw, 360px); height:100vh; transform:translateX(100%); transition:0.35s ease; z-index:80; background:linear-gradient(180deg, #ffffff, #f6fbff); box-shadow:-20px 0 50px rgba(16,24,39,0.18); padding:22px; display:flex; flex-direction:column; gap:16px;">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:8px;">
-      <img src="images/logo.png" alt="ACORSER logo" style="height:48px; width:auto; object-fit:contain;" />
-      <button id="mobileMenuClose" aria-label="Close menu" style="width:42px; height:42px; border-radius:12px; border:1px solid rgba(16,24,39,0.08); background:#ffffff; font-size:24px; line-height:1; cursor:pointer;">×</button>
-    </div>
-    <a href="index.html#home" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Home</a>
-    <a href="index.html#overview" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Overview</a>
-    <a href="index.html#services" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Services</a>
-    <a href="index.html#clients" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Clients</a>
-    <a href="index.html#team" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Team</a>
-    <a href="index.html#contact" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:linear-gradient(135deg, #1098db, #4a46a3); font-weight:700; color:#ffffff;">Contact</a>
+  <aside id="mobileSidebar"
+style="
+position:fixed;
+top:0;
+right:0;
+width:min(88vw, 360px);
+height:100vh;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+transform:translateX(100%);
+transition:0.35s ease;
+z-index:80;
+background:linear-gradient(180deg, #ffffff, #f6fbff);
+box-shadow:-20px 0 50px rgba(16,24,39,0.18);
+padding:22px;
+display:flex;
+flex-direction:column;
+gap:16px;">
+  <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:8px;">
+    <img src="images/logo.png" alt="ACORSER logo" style="height:48px; width:auto; object-fit:contain;" />
+    <button id="mobileMenuClose" aria-label="Close menu" style="width:42px; height:42px; border-radius:12px; border:1px solid rgba(16,24,39,0.08); background:#ffffff; font-size:24px; line-height:1; cursor:pointer;">×</button>
+  </div>
 
-    <div style="margin-top:auto; padding:18px; border-radius:22px; background:linear-gradient(135deg, #101827, #1d2d48); color:#ffffff;">
-      <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; font-weight:700; margin-bottom:8px;">Johannesburg Office</div>
-      <div style="font-size:14px; line-height:1.8; color:rgba(255,255,255,0.82);">2nd Floor Orion House, 49 Jorrissen Street<br/>Braamfontein - Johannesburg 2000</div>
+  <a href="index.html#home" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Home</a>
+  <a href="index.html#overview" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Overview</a>
+
+  <div style="border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); overflow:hidden;">
+    <button id="mobileServicesToggle" type="button" style="width:100%; display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:#ffffff; border:0; font-weight:700; color:#223047; cursor:pointer; font-size:16px;">
+      <span>Services</span>
+      <span id="mobileServicesCaret" style="font-size:14px; transition:transform 0.25s ease;">▾</span>
+    </button>
+
+    <div id="mobileServicesMenu" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease; background:#f8fbff; border-top:1px solid rgba(16,24,39,0.06);">
+      <a href="advisory.html" style="display:block; padding:12px 16px; color:#42526b; font-weight:600; border-bottom:1px solid rgba(16,24,39,0.04);">Advisory Division</a>
+      <a href="law-firm.html" style="display:block; padding:12px 16px; color:#42526b; font-weight:600; border-bottom:1px solid rgba(16,24,39,0.04);">Law Firm Division</a>
+      <a href="academy.html" style="display:block; padding:12px 16px; color:#42526b; font-weight:600;">Acorser Academy</a>
     </div>
-  </aside>
+  </div>
+
+  <a href="index.html#clients" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Clients</a>
+  <a href="index.html#team" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Team</a>
+  <a href="index.html#contact" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:linear-gradient(135deg, #1098db, #4a46a3); font-weight:700; color:#ffffff;">Contact</a>
+
+  <div style="margin-top:auto; padding:18px; border-radius:22px; background:linear-gradient(135deg, #101827, #1d2d48); color:#ffffff;">
+    <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; font-weight:700; margin-bottom:8px;">Johannesburg Office</div>
+    <div style="font-size:14px; line-height:1.8; color:rgba(255,255,255,0.82);">2nd Floor Orion House, 49 Jorrissen Street<br>Braamfontein - Johannesburg 2000</div>
+  </div>
+</aside>
 
   <main>
     <!-- Hero Section -->
@@ -1180,5 +1241,26 @@
       });
     });
   </script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesToggle = document.getElementById('mobileServicesToggle');
+  const servicesMenu = document.getElementById('mobileServicesMenu');
+  const servicesCaret = document.getElementById('mobileServicesCaret');
+
+  if (servicesToggle && servicesMenu && servicesCaret) {
+    servicesToggle.addEventListener('click', function () {
+      const isOpen = servicesMenu.style.maxHeight && servicesMenu.style.maxHeight !== '0px';
+
+      if (isOpen) {
+        servicesMenu.style.maxHeight = '0';
+        servicesCaret.style.transform = 'rotate(0deg)';
+      } else {
+        servicesMenu.style.maxHeight = servicesMenu.scrollHeight + 'px';
+        servicesCaret.style.transform = 'rotate(180deg)';
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
