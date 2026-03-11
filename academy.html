@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acorser Academy | Corporate Training & Development</title>
+  <meta name="description" content="Acorser Academy provides corporate training, professional development workshops, training needs analysis and organisational capacity development programmes.">
+
+<meta name="keywords" content="corporate training Africa, professional development workshops, organisational capacity development, training consulting Africa, Acorser Academy">
+
+<meta name="author" content="ACORSER">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Acorser Academy | Corporate Training & Development">
+<meta property="og:description" content="Professional training programmes, corporate workshops and skills development initiatives delivered by Acorser Academy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://acorser.co.za/academy.html">
+<meta property="og:image" content="https://acorser.co.za/favicon.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #223047; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    @keyframes slideFade{
+      0%,22%{opacity:1;transform:translateY(0) scale(1);}
+      27%,100%{opacity:0;transform:translateY(20px) scale(1.02);}
+    }
+
+    @keyframes imageZoom {
+      0%, 100% { transform: scale(1.02); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .overview-grid,
+      .client-grid,
+      .team-grid,
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .nav-links,
+      .desktop-cta {
+        display: none !important;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex !important;
+      }
+
+      .hero-section .hero-inner {
+        padding: 24px 0 36px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-actions a { display: block !important; width: 100% !important; margin-right: 0 !important; }
+      .footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
+    }
+
+    @media (max-width: 768px){
+      .footer-grid{
+        grid-template-columns:1fr 1fr !important;
+        gap:24px !important;
+      }
+      .footer-grid > div:first-child{
+        grid-column:1 / -1;
+        text-align:center;
+      }
+      .footer-grid > div:last-child{
+        grid-column:1 / -1;
+      }
+    }
+
+    /* DESKTOP NAV */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px !important;
+      font-size: 17px !important;
+      font-weight: 700;
+    }
+
+    .nav-links a,
+    .nav-dropdown-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #42526b;
+      text-decoration: none;
+      padding: 10px 0;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-dropdown-toggle:hover {
+      color: #1098db;
+      transform: translateY(-1px);
+    }
+
+    .nav-links a::after,
+    .nav-dropdown-toggle::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #1098db, #4a46a3);
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-dropdown-toggle:hover::after,
+    .nav-dropdown:hover .nav-dropdown-toggle::after {
+      width: 100%;
+    }
+
+    /* DROPDOWN */
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-caret {
+      font-size: 12px;
+      line-height: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-dropdown:hover .nav-caret {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 0;
+      min-width: 240px;
+      padding: 10px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid rgba(16, 152, 219, 0.12);
+      box-shadow: 0 18px 50px rgba(8, 17, 29, 0.14);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+      z-index: 999;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      color: #42526b;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+    }
+
+    .nav-dropdown-menu a::after {
+      display: none;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(16, 152, 219, 0.08);
+      color: #1098db;
+      padding-left: 18px;
+    }
+
+    /* Page specific styles */
+    .academy-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #07111d 0%, #0f1d2e 50%, #1a2d42 100%);
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .academy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/academy-hero.jpg') center/cover no-repeat;
+      opacity: 0.15;
+    }
+
+    .academy-hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    .academy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #b9e7ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .academy-hero h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 800px;
+    }
+
+    .academy-hero p {
+      margin: 20px 0 0;
+      font-size: 18px;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.82);
+      max-width: 680px;
+    }
+
+    /* Services Grid */
+    .services-section {
+      position: relative;
+      padding: 92px 0;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .services-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16,152,219,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #1098db;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #102033;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      padding: 36px;
+      border-radius: 28px;
+      background: #ffffff;
+      border: 1px solid rgba(16,24,39,0.08);
+      box-shadow: 0 12px 28px rgba(16,24,39,0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(16,24,39,0.12);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(16,152,219,0.16), rgba(74,70,163,0.22));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #173a6a;
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: #102033;
+    }
+
+    .service-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #617189;
+    }
+
+    /* Training Process */
+    .process-section {
+      position: relative;
+      padding: 92px 0;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
+      overflow: hidden;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 32px 24px;
+      border-radius: 24px;
+      background: #ffffff;
+      border: 1px solid rgba(16,24,39,0.06);
+      box-shadow: 0 10px 30px rgba(16,24,39,0.04);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .process-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1098db, #4a46a3);
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+
+    .process-card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #102033;
+    }
+
+    .process-card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #617189;
+    }
+
+    /* Courses Section */
+    .courses-section {
+      position: relative;
+      padding: 92px 0;
+      background: #07111d;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .courses-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/pattern-dots.png') repeat;
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    .courses-section .section-label {
+      color: #9edcff;
+    }
+
+    .courses-section .section-title {
+      color: #ffffff;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .course-card {
+      padding: 32px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-6px);
+    }
+
+    .course-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .course-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(16,152,219,0.3), rgba(74,70,163,0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b9e7ff;
+      font-size: 20px;
+    }
+
+    .course-card h4 {
+      margin: 0;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .course-card p {
+      margin: 0 0 16px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .course-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .course-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Why Academy */
+    .why-academy-section {
+      position: relative;
+      padding: 92px 0;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .why-content h2 {
+      margin: 0 0 20px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.15;
+      color: #102033;
+    }
+
+    .why-content > p {
+      margin: 0 0 28px;
+      font-size: 16px;
+      line-height: 1.85;
+      color: #617189;
+    }
+
+    .why-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .why-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1098db, #4a46a3);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .why-item div strong {
+      display: block;
+      font-size: 16px;
+      color: #102033;
+      margin-bottom: 4px;
+    }
+
+    .why-item div span {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #617189;
+    }
+
+    .why-visual {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #eef5fb, #f8fbff);
+      padding: 40px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-card {
+      padding: 28px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid rgba(16,24,39,0.06);
+      box-shadow: 0 10px 30px rgba(16,24,39,0.06);
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1098db, #4a46a3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #617189;
+      line-height: 1.4;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 100px 0;
+      background: linear-gradient(135deg, #1098db 0%, #4a46a3 100%);
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/pattern-grid.png') repeat;
+      opacity: 0.1;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .cta-section p {
+      margin: 0 0 32px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 28px;
+      height: 54px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #4a46a3;
+      font-size: 15px;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cta-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 28px;
+      height: 54px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .cta-btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 980px) {
+      .services-grid,
+      .courses-grid,
+      .process-grid {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .why-grid {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-grid {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .service-card,
+      .course-card,
+      .process-card {
+        padding: 24px !important;
+      }
+      
+      .academy-hero-content {
+        padding: 60px 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,0.94); border-bottom: 1px solid rgba(16,24,39,0.08); backdrop-filter: blur(12px);">
+    <div style="width: min(1200px, calc(100% - 32px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 0;">
+      <a href="index.html" style="display: inline-flex; align-items: center;">
+        <img src="images/logo.png" alt="ACORSER logo" style="height: 62px; width: auto; object-fit: contain;" />
+      </a>
+
+      <nav class="nav-links" style="display:flex; align-items:center; gap:36px; font-size:17px; font-weight:700; color:#42526b;">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#overview">Overview</a>
+
+        <div class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-toggle">
+            Services
+            <span class="nav-caret">▾</span>
+          </a>
+
+          <div class="nav-dropdown-menu">
+            <a href="advisory.html">Advisory Division</a>
+            <a href="law-firm.html">Law Firm Division</a>
+            <a href="academy.html">Acorser Academy</a>
+          </div>
+        </div>
+
+        <a href="index.html#clients">Clients</a>
+        <a href="index.html#team">Team</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" style="display:none; width:46px; height:46px; border:1px solid rgba(16,24,39,0.08); border-radius:14px; background:#f7fbff; align-items:center; justify-content:center; flex-direction:column; gap:5px; cursor:pointer;">
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+        </button>
+        <a href="index.html#contact" class="desktop-cta" style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border-radius: 999px; background: linear-gradient(135deg, #1098db, #4a46a3); color: #ffffff; font-size: 14px; font-weight: 700; box-shadow: 0 12px 28px rgba(16,152,219,0.25);">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenuBackdrop" style="position:fixed; inset:0; background:rgba(4,10,20,0.48); opacity:0; pointer-events:none; transition:0.3s ease; z-index:70;"></div>
+  <aside id="mobileSidebar" style="position:fixed; top:0; right:0; width:min(88vw, 360px); height:100vh; transform:translateX(100%); transition:0.35s ease; z-index:80; background:linear-gradient(180deg, #ffffff, #f6fbff); box-shadow:-20px 0 50px rgba(16,24,39,0.18); padding:22px; display:flex; flex-direction:column; gap:16px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:8px;">
+      <img src="images/logo.png" alt="ACORSER logo" style="height:48px; width:auto; object-fit:contain;" />
+      <button id="mobileMenuClose" aria-label="Close menu" style="width:42px; height:42px; border-radius:12px; border:1px solid rgba(16,24,39,0.08); background:#ffffff; font-size:24px; line-height:1; cursor:pointer;">×</button>
+    </div>
+    <a href="index.html#home" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Home</a>
+    <a href="index.html#overview" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Overview</a>
+    <a href="index.html#services" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Services</a>
+    <a href="index.html#clients" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Clients</a>
+    <a href="index.html#team" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Team</a>
+    <a href="index.html#contact" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:linear-gradient(135deg, #1098db, #4a46a3); font-weight:700; color:#ffffff;">Contact</a>
+
+    <div style="margin-top:auto; padding:18px; border-radius:22px; background:linear-gradient(135deg, #101827, #1d2d48); color:#ffffff;">
+      <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; font-weight:700; margin-bottom:8px;">Johannesburg Office</div>
+      <div style="font-size:14px; line-height:1.8; color:rgba(255,255,255,0.82);">2nd Floor Orion House, 49 Jorrissen Street<br/>Braamfontein - Johannesburg 2000</div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="academy-hero">
+      <div class="academy-hero-content">
+        <div class="academy-badge reveal">
+          <i class="fa-solid fa-graduation-cap"></i>
+          Acorser Academy
+        </div>
+        <h1 class="reveal">Corporate Training and Capacity Development</h1>
+        <p class="reveal" style="transition-delay: 0.1s;">
+          Through Acorser Academy, we deliver professional training programmes, workshop design, and skills development initiatives that transform organisational capability. We turn advice into actionable expertise.
+        </p>
+        <div class="hero-actions reveal" style="margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; transition-delay: 0.2s;">
+          <a href="#services" style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 24px; border-radius:999px; background:linear-gradient(135deg,#1098db,#4a46a3); color:#ffffff; font-size:14px; font-weight:700; text-decoration:none;">
+            Explore Services
+          </a>
+          <a href="#courses" style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 24px; border-radius:999px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#ffffff; font-size:14px; font-weight:700; text-decoration:none;">
+            View Courses
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div style="width:min(1200px,calc(100% - 32px));margin:0 auto;">
+        <div class="section-header reveal">
+          <div class="section-label">Training Services</div>
+          <h2 class="section-title">Comprehensive corporate training solutions tailored to your needs</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3>Training Needs Analysis</h3>
+            <p>We assess organisational capability gaps and identify specific training requirements for different employee categories to achieve targeted skill development outcomes.</p>
+          </article>
+
+          <article class="service-card reveal" style="transition-delay: 0.08s;">
+            <div class="service-icon">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h3>Workshop Design</h3>
+            <p>Custom-designed workshops based on detailed needs analysis, ensuring content relevance and practical application for corporate clients across all sectors.</p>
+          </article>
+
+          <article class="service-card reveal" style="transition-delay: 0.16s;">
+            <div class="service-icon">
+              <i class="fa-solid fa-users-rectangle"></i>
+            </div>
+            <h3>Training Forums</h3>
+            <p>End-to-end organisation of training forums and workshops, including venue coordination, logistics management, and participant engagement strategies.</p>
+          </article>
+
+          <article class="service-card reveal" style="transition-delay: 0.24s;">
+            <div class="service-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3>Course Materials</h3>
+            <p>Development of comprehensive course materials, training manuals, and conference documentation tailored to specific learning objectives and organisational contexts.</p>
+          </article>
+
+          <article class="service-card reveal" style="transition-delay: 0.32s;">
+            <div class="service-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h3>Facilitator Support</h3>
+            <p>Access to our database of qualified consultants and facilitators with expertise across management, corporate governance, legal compliance, and sector-specific domains.</p>
+          </article>
+
+          <article class="service-card reveal" style="transition-delay: 0.4s;">
+            <div class="service-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h3>Accreditation Support</h3>
+            <p>Guidance for institutions and companies pursuing training accreditations, including moderator and assessor services, and liaison with SETAs and professional bodies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div style="width:min(1200px,calc(100% - 32px));margin:0 auto;">
+        <div class="section-header reveal" style="text-align:center; margin:0 auto 48px;">
+          <div class="section-label">Our Approach</div>
+          <h2 class="section-title">How we deliver training excellence</h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card reveal">
+            <div class="process-number">1</div>
+            <h4>Assess</h4>
+            <p>Comprehensive training needs analysis to identify skill gaps and organisational requirements</p>
+          </div>
+          <div class="process-card reveal" style="transition-delay: 0.1s;">
+            <div class="process-number">2</div>
+            <h4>Design</h4>
+            <p>Custom curriculum development and workshop structuring aligned to specific objectives</p>
+          </div>
+          <div class="process-card reveal" style="transition-delay: 0.2s;">
+            <div class="process-number">3</div>
+            <h4>Deliver</h4>
+            <p>Professional facilitation with expert trainers and comprehensive material support</p>
+          </div>
+          <div class="process-card reveal" style="transition-delay: 0.3s;">
+            <div class="process-number">4</div>
+            <h4>Evaluate</h4>
+            <p>Post-training assessment and continuous improvement feedback integration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+      <div style="width:min(1200px,calc(100% - 32px));margin:0 auto;">
+        <div class="section-header reveal">
+          <div class="section-label">Training Areas</div>
+          <h2 class="section-title">Specialised programmes for public and private sector clients</h2>
+        </div>
+
+        <div class="courses-grid">
+          <article class="course-card reveal">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <h4>Corporate Governance</h4>
+            </div>
+            <p>Board effectiveness, compliance frameworks, risk management, and ethical leadership training for executives and directors.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> 2-5 Days</span>
+              <span><i class="fa-solid fa-users"></i> In-house</span>
+            </div>
+          </article>
+
+          <article class="course-card reveal" style="transition-delay: 0.08s;">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <h4>Legal & Regulatory Compliance</h4>
+            </div>
+            <p>Understanding regulatory environments, compliance management systems, and legal risk mitigation strategies.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> 1-3 Days</span>
+              <span><i class="fa-solid fa-users"></i> Public/Private</span>
+            </div>
+          </article>
+
+          <article class="course-card reveal" style="transition-delay: 0.16s;">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h4>Management Development</h4>
+            </div>
+            <p>Strategic management, performance systems, human resource management, and operational excellence programmes.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> 3-10 Days</span>
+              <span><i class="fa-solid fa-users"></i> All Levels</span>
+            </div>
+          </article>
+
+          <article class="course-card reveal" style="transition-delay: 0.24s;">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h4>Entrepreneurship</h4>
+            </div>
+            <p>New venture creation, business planning, financial management, and growth strategies for entrepreneurs and SMEs.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> 2-5 Days</span>
+              <span><i class="fa-solid fa-users"></i> Open/SME</span>
+            </div>
+          </article>
+
+          <article class="course-card reveal" style="transition-delay: 0.32s;">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h4>Policy Development</h4>
+            </div>
+            <p>Educational policy support, protocol development, and procedure documentation for institutional effectiveness.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> Custom</span>
+              <span><i class="fa-solid fa-users"></i> Institutional</span>
+            </div>
+          </article>
+
+          <article class="course-card reveal" style="transition-delay: 0.4s;">
+            <div class="course-header">
+              <div class="course-icon">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <h4>Professional Accreditation</h4>
+            </div>
+            <p>Preparation for professional body accreditations, assessor training, and quality assurance systems.</p>
+            <div class="course-meta">
+              <span><i class="fa-regular fa-clock"></i> Variable</span>
+              <span><i class="fa-solid fa-users"></i> Professional</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Academy Section -->
+    <section class="why-academy-section">
+      <div style="width:min(1200px,calc(100% - 32px));margin:0 auto;">
+        <div class="why-grid">
+          <div class="why-content reveal">
+            <div class="section-label">Why Acorser Academy</div>
+            <h2>Training that delivers measurable organisational impact</h2>
+            <p>Our academy combines research-backed curriculum design, experienced facilitators, and practical application to ensure training translates into improved organisational performance.</p>
+            
+            <div class="why-list">
+              <div class="why-item">
+                <div class="why-check"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Research-Based Content</strong>
+                  <span>Training materials developed from current business research and applicable theories in managerial sciences</span>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-check"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Expert Facilitators</strong>
+                  <span>Access to consultants and trainers with real-world experience across public and private sectors</span>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-check"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Customised Delivery</strong>
+                  <span>Programmes tailored to specific organisational contexts, industries, and competency requirements</span>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-check"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Regional Reach</strong>
+                  <span>Training delivery capabilities across South Africa and through our representative network in Africa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-visual reveal" style="transition-delay: 0.2s;">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Consultants & Trainers</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Training Experience</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">9</div>
+                <div class="stat-label">African Countries Served</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">1000s</div>
+                <div class="stat-label">Professionals Trained</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content reveal">
+        <h2>Ready to develop your team's capabilities?</h2>
+        <p>Contact us to discuss your training needs, schedule a consultation, or request a customised programme proposal for your organisation.</p>
+        <div class="cta-buttons">
+          <a href="index.html#contact" class="cta-btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enquire Now
+          </a>
+          <a href="index.html#contact" class="cta-btn-secondary">
+            <i class="fa-solid fa-phone"></i>
+            (+27) 11 039 1377
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background:#07111d; color:#ffffff; padding:72px 0 36px;">
+    <div style="width:min(1200px, calc(100% - 32px)); margin:0 auto; display:grid; grid-template-columns:1.2fr 0.8fr 0.8fr 1fr; gap:28px;" class="footer-grid">
+      <div>
+        <img src="images/footer.png" alt="ACORSER logo" style="height:155px; width:auto; object-fit:contain; margin-bottom:16px;" />
+        <p style="margin:0; font-size:15px; line-height:1.9; color:rgba(255,255,255,0.76); max-width:360px;">A South African advisory and training firm with regional representative interests across Africa, serving public institutions, universities, corporates, and specialised industry clients.</p>
+      </div>
+      <div>
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">Site Links</div>
+        <div style="display:grid; gap:12px; font-size:15px; color:rgba(255,255,255,0.82);">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#overview">Overview</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#clients">Clients</a>
+          <a href="index.html#team">Team</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">Divisions</div>
+        <div style="display:grid; gap:12px; font-size:15px; color:rgba(255,255,255,0.82); margin-bottom:18px;">
+          <a href="advisory.html">Research & Advisory</a>
+          <a href="law-firm.html">Legal & Compliance</a>
+          <a href="academy.html">Acorser Academy</a>
+        </div>
+        <div style="display:flex; gap:14px; font-size:18px; color:#ffffff;">
+          <a href="https://x.com/AcorserConsult" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/acorserc" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">Office</div>
+        <div style="font-size:15px; line-height:1.9; color:rgba(255,255,255,0.76);">Johannesburg Office<br>2nd Floor Orion House, 49 Jorrissen Street<br>Braamfontein - Johannesburg 2000<br>Gauteng Province; South Africa<br><br>info@acorser.co.za<br>consult@acorser.co.za<br>(+27) 11 039 1377<br>Fax: (+27) 86 568 4730</div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="width:min(1200px, calc(100% - 32px)); margin:28px auto 0; padding-top:22px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:14px; color:rgba(255,255,255,0.58);">
+      <div>© ACORSER. All rights reserved.</div>
+      <div>Reg. No. 2010/077907/23 · Income Tax Ref No. 9279072186</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu
+    (function () {
+      const openBtn = document.getElementById('mobileMenuBtn');
+      const closeBtn = document.getElementById('mobileMenuClose');
+      const sidebar = document.getElementById('mobileSidebar');
+      const backdrop = document.getElementById('mobileMenuBackdrop');
+      const links = document.querySelectorAll('.mobile-link');
+
+      function openMenu() {
+        sidebar.style.transform = 'translateX(0)';
+        backdrop.style.opacity = '1';
+        backdrop.style.pointerEvents = 'auto';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        sidebar.style.transform = 'translateX(100%)';
+        backdrop.style.opacity = '0';
+        backdrop.style.pointerEvents = 'none';
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+      links.forEach((link) => link.addEventListener('click', closeMenu));
+    })();
+
+    // Scroll Reveal Animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const revealElements = document.querySelectorAll('.reveal');
+      
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.18,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(function(el) {
+        revealObserver.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

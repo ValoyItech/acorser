@@ -1,405 +1,2989 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ghenorganics</title>
-        <meta name="description" content="Ghenorganics offers premium organic wellness products to support your natural lifestyle. Explore our selection of herbal supplements and holistic health solutions." />
-        <meta name="keywords" content="Ghenorganics, organic products, herbal supplements, wellness, health, natural remedies, South Africa" />
-        <meta name="author" content="Hector Baloyi" />
-      
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ghenorganics - Pure Organic Wellness" />
-        <meta property="og:description" content="Explore our range of herbal wellness products, including Maca Root, Sea Moss, Shilajit, and more. Natural remedies, ethically sourced." />
-        <meta property="og:image" content="images/logo.png" />
-        <meta property="og:url" content="https://www.ghenorganics.co.za/" />
-        <meta property="og:site_name" content="Ghenorganics" />
-      
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ghenorganics - Pure Organic Wellness" />
-        <meta name="twitter:description" content="Organic health products that empower your wellbeing. Made with love in Africa." />
-        <meta name="twitter:image" content="images/logo.png" />
-      
-        <!-- Favicon -->
-        <link rel="icon" href="images/logo.png" type="image/png" />
-      
-        <!-- Stylesheets and Scripts -->
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-        <script src="script.js" defer></script>
-      </head>      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACORSER | Company Overview</title>
+  <meta name="description" content="ACORSER is a South African research, advisory and corporate training firm providing consulting, legal support and professional training services across Africa.">
+
+<meta name="keywords" content="ACORSER, research consulting Africa, corporate advisory Africa, legal consulting South Africa, regulatory compliance consulting, corporate training Africa, Acorser Academy">
+
+<meta name="author" content="ACORSER">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="ACORSER | Research, Advisory & Corporate Training Across Africa">
+<meta property="og:description" content="Specialist consulting, research, legal advisory and corporate training services for businesses, institutions and governments across Africa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://acorser.co.za/">
+<meta property="og:image" content="https://acorser.co.za/favicon.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #223047; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    @keyframes slideFade{
+0%,22%{opacity:1;transform:translateY(0) scale(1);}
+27%,100%{opacity:0;transform:translateY(20px) scale(1.02);}
+}
+
+    @keyframes imageZoom {
+      0%, 100% { transform: scale(1.02); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 980px) {
+  .hero-grid,
+  .overview-grid,
+  .client-grid,
+  .team-grid,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .nav-links,
+  .desktop-cta {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+
+  .hero-section .hero-inner {
+    padding: 24px 0 36px !important;
+  }
+}
+
+    @media (max-width: 640px) {
+      .hero-actions a { display: block !important; width: 100% !important; margin-right: 0 !important; }
+      .footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
+    }
+
+    @media (max-width: 768px){
+
+.footer-grid{
+grid-template-columns:1fr 1fr !important;
+gap:24px !important;
+}
+
+/* make first logo column full width */
+.footer-grid > div:first-child{
+grid-column:1 / -1;
+text-align:center;
+}
+
+/* make office section full width at bottom */
+.footer-grid > div:last-child{
+grid-column:1 / -1;
+}
+
+}
+
+
+/* DESKTOP NAV */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px !important;
+  font-size: 17px !important;
+  font-weight: 700;
+}
+
+.nav-links a,
+.nav-dropdown-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #42526b;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-dropdown-toggle:hover {
+  color: #1098db;
+  transform: translateY(-1px);
+}
+
+.nav-links a::after,
+.nav-dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #1098db, #4a46a3);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-dropdown-toggle:hover::after,
+.nav-dropdown:hover .nav-dropdown-toggle::after {
+  width: 100%;
+}
+
+/* DROPDOWN */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-caret {
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.nav-dropdown:hover .nav-caret {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 240px;
+  padding: 10px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(16, 152, 219, 0.12);
+  box-shadow: 0 18px 50px rgba(8, 17, 29, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 999;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #42526b;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+}
+
+.nav-dropdown-menu a::after {
+  display: none;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(16, 152, 219, 0.08);
+  color: #1098db;
+  padding-left: 18px;
+}
+  </style>
+</head>
 <body>
-
-    <header>
-        <div class="header-bar">
-          <div class="logo">
-            <img src="images/logo.png" alt="Ghenorganics Logo" />
-            <h1>Ghenorganics</h1>
-          </div>
-          <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
-          </div>
-        </div>
-      
-        <nav class="sidebar" id="sidebar">
-          <div class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></div>
-          <ul>
-            <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about"><i class="fas fa-leaf"></i> About</a></li>
-            <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            <li><a href="return-policy.html"><i class="fas fa-undo"></i> Return Policy</a></li>
-            <li><a href="https://www.google.com/maps/place/Ghenorganics/@-32.7016281,5.8469894,4z/data=!4m8!3m7!1s0x24be9006da9719a5:0xdee1fea10354bb97!8m2!3d-34.6283864!4d27.2516952!9m1!1b1!16s%2Fg%2F11wc32sfz3?authuser=0&entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fas fa-star"></i> Rate Us</a></li>
-            <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-          </ul>
-        </nav>
-      </header>
-      
-
-      <section id="hero" class="hero-slider">
-        <div class="slide" style="background-image: url('images/slide1.jpg')">
-          <div class="slide-text">
-            <h1 data-aos="fade-up">Pure Organic Wellness</h1>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('images/slide2.jpg')">
-          <div class="slide-text">
-            <h1 data-aos="fade-up">Naturally Boost Your Energy</h1>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('images/slide3.jpg')">
-          <div class="slide-text">
-            <h1 data-aos="fade-up">Empower Your Health</h1>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('images/slide4.jpg')">
-          <div class="slide-text">
-            <h1 data-aos="fade-up">Herbal Support for Modern Life</h1>
-          </div>
-        </div>
-      </section>
-    
-
-  <section class="about" id="about">
-    <h2 data-aos="fade-up">Welcome to Ghenorganics</h2>
-    
-    <div class="about-scroll-container">
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-info-circle"></i>
-        </div>
-        <h3>About Us</h3>
-        <p>
-          Ghenorganics is a wellness-driven company committed to offering premium, organic products designed to promote a healthy, balanced lifestyle. We firmly believe that nature holds the key to holistic well-being, and our mission is to harness the full potential of botanicals to nurture the mind, body, and spirit.
-        </p>
-      </div>
-  
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-seedling"></i>
-        </div>
-        <h3>Our Roots</h3>
-        <p>
-          Grounded in a deep respect for both traditional herbal wisdom and modern wellness science, Ghenorganics carefully curates a selection of nature’s finest offerings. From the sun-soaked fields of Africa to the high-altitude plateaus of the Andes, we source our ingredients with care to ensure every product embodies the purity and potency of the natural world.
-        </p>
-      </div>
-  
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-box"></i>
-        </div>
-        <h3>Our Products</h3>
-        <p>
-          Ghenorganics proudly presents a range of thoughtfully crafted supplements, including blends featuring renowned ingredients like Maca Root, African Potato, and other health-boosting botanicals. Our formulations are designed to seamlessly integrate into your daily routine, supporting immune health, hormonal balance, energy, and overall vitality.
-        </p>
-      </div>
-  
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-check-circle"></i>
-        </div>
-        <h3>Quality Assurance</h3>
-        <p>
-          At Ghenorganics, quality is our highest priority. We adhere to stringent standards throughout the production process—from sourcing to packaging. Our dedication to purity ensures that each Ghenorganics product is free from artificial additives, preservatives, and GMOs, so you can trust that you're receiving the best nature has to offer.
-        </p>
-      </div>
-  
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-hands-helping"></i>
-        </div>
-        <h3>Community and Sustainability</h3>
-        <p>
-          Ghenorganics is more than just a brand; it’s a community of individuals committed to a natural approach to wellness. We foster a culture of shared knowledge, where everyone can learn and grow on their wellness journey. We are also dedicated to sustainable and ethical practices, ensuring our impact on the planet is as positive as the benefits our products provide.
-        </p>
-      </div>
-  
-      <div class="about-item">
-        <div class="about-icon">
-          <i class="fas fa-hand-holding-heart"></i>
-        </div>
-        <h3>Join Us on the Journey</h3>
-        <p>
-          Embark on a path to wellness with Ghenorganics. Whether you’re just beginning your journey toward a healthier lifestyle or are already well-versed in natural remedies, our products are crafted for you. Explore the richness of nature and discover the difference Ghenorganics can make in your life.
-        </p>
-      </div>
-    </div>
-  
-    <div class="scroll-nav">
-      <button class="scroll-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-      <button class="scroll-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </section>
-
-  <section class="products" id="products">
-    <h2 data-aos="fade-up">Our Products</h2>
-    <div class="search-box" data-aos="fade-up">
-      <input type="text" id="product-search" placeholder="Search for a product..." />
-    </div>
-    <div class="product-list">
-      <div class="product" data-aos="fade-up">
-        <img src="images/ashwagandha.jpg" alt="Ashwagandha" />
-        <h3>Ashwagandha</h3>
-        <p>Natural stress support and energy booster.</p>
-        <p class="price">R130</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/collagen.jpg" alt="Collagen" />
-        <h3>Collagen</h3>
-        <p>Supports skin, joints, and overall vitality.</p>
-        <p class="price">R120</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/maca.jpg" alt="Maca Root" />
-        <h3>Maca Root</h3>
-        <p>Enhances stamina, mood and endurance.</p>
-        <p class="price">R140</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/macho.jpg" alt="Macho Man" />
-        <h3>Macho Man</h3>
-        <p>Men's vitality and hormonal balance.</p>
-        <p class="price">R170</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/moringa.jpg" alt="Moringa" />
-        <h3>Moringa</h3>
-        <p>Superfood packed with nutrients and antioxidants.</p>
-        <p class="price">R90</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/seamoss.jpg" alt="SEA MOSS" />
-        <h3>SEA MOSS</h3>
-        <p>Immune-boosting marine super supplement.</p>
-        <p class="price">R150</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/shilajit.jpg" alt="Shilajit" />
-        <h3>Shilajit</h3>
-        <p>Restores energy, enhances performance and wellness.</p>
-        <p class="price">R200</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/soursop.jpg" alt="Soursop Leaves" />
-        <h3>Soursop Leaves</h3>
-        <p>Traditional remedy for immunity and detox.</p>
-        <p class="price">R100</p>
-      </div>
-      <div class="product" data-aos="fade-up">
-        <img src="images/zinc.jpg" alt="Zinc" />
-        <h3>Zinc</h3>
-        <p>Supports immunity and cellular metabolism.</p>
-        <p class="price">R80</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 data-aos="fade-up">Contact Us</h2>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="contact-text">
-            <p>+27 79 939 2702</p>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-text">
-            <p>info@ghenorganics.co.za | sales@ghenorganics.co.za | support@ghenorganics.co.za</p>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-text">
-            <p>Shop No. 1, China Gate, Cnr. Zuurfontein Rd. & Oranjerivier Drive, Kempton Park West.1619</p>
-          </div>
-        </div>
-      </div>
-      
-      <iframe class="map" data-aos="fade-up" src="https://www.google.com/maps?q=14+Panfluit+Street,+Eco+Park+East,+Centurion,+Gauteng,+0157&output=embed"></iframe>
-    </div>
-    
-    <div class="contact-links">
-      <a href="https://www.facebook.com/ghenoragnics/" target="_blank" class="contact-link">
-        <i class="fab fa-facebook-f"></i>
+  <header style="position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,0.94); border-bottom: 1px solid rgba(16,24,39,0.08); backdrop-filter: blur(12px);">
+    <div style="width: min(1200px, calc(100% - 32px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 0;">
+      <a href="#home" style="display: inline-flex; align-items: center;">
+        <img src="images/logo.png" alt="ACORSER logo" style="height: 62px; width: auto; object-fit: contain;" />
       </a>
-      <a href="https://www.google.com/maps/place/Ghenorganics/@-32.7016281,5.8469894,4z/data=!4m8!3m7!1s0x24be9006da9719a5:0xdee1fea10354bb97!8m2!3d-34.6283864!4d27.2516952!9m1!1b1!16s%2Fg%2F11wc32sfz3?authuser=0&entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">
-        <i class="fas fa-star"></i>
-      </a>
-      <a href="https://wa.me/27799392702" target="_blank" class="contact-link">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="#faq" class="contact-link">
-        <i class="fas fa-question-circle"></i>
-      </a>
+
+      <nav class="nav-links" style="display:flex; align-items:center; gap:36px; font-size:17px; font-weight:700; color:#42526b;">
+  <a href="#home">Home</a>
+  <a href="#overview">Overview</a>
+
+  <div class="nav-dropdown">
+    <a href="#services" class="nav-dropdown-toggle">
+      Services
+      <span class="nav-caret">▾</span>
+    </a>
+
+    <div class="nav-dropdown-menu">
+      <a href="advisory.html">Advisory Division</a>
+      <a href="law-firm.html">Law Firm Division</a>
+      <a href="academy.html">Acorser Academy</a>
     </div>
-  </section>
+  </div>
 
-  <!-- FAQ Section -->
-  <section class="faq" id="faq">
-    <h2 data-aos="fade-up">Frequently Asked Questions</h2>
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">Are your products organic?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          Yes, at GhenOrganics, we prioritize using certified organic ingredients in all our products. We carefully source them from trusted suppliers to meet the highest standards of quality and purity. Our goal is to provide natural, wholesome options that promote your health and wellness, free from harmful chemicals and additives.
-        </div>
+  <a href="#clients">Clients</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" style="display:none; width:46px; height:46px; border:1px solid rgba(16,24,39,0.08); border-radius:14px; background:#f7fbff; align-items:center; justify-content:center; flex-direction:column; gap:5px; cursor:pointer;">
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+          <span style="display:block; width:18px; height:2px; background:#223047; border-radius:999px;"></span>
+        </button>
+        <a href="#contact" class="desktop-cta" style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border-radius: 999px; background: linear-gradient(135deg, #1098db, #4a46a3); color: #ffffff; font-size: 14px; font-weight: 700; box-shadow: 0 12px 28px rgba(16,152,219,0.25);">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenuBackdrop" style="position:fixed; inset:0; background:rgba(4,10,20,0.48); opacity:0; pointer-events:none; transition:0.3s ease; z-index:70;"></div>
+  <aside id="mobileSidebar" style="position:fixed; top:0; right:0; width:min(88vw, 360px); height:100vh; transform:translateX(100%); transition:0.35s ease; z-index:80; background:linear-gradient(180deg, #ffffff, #f6fbff); box-shadow:-20px 0 50px rgba(16,24,39,0.18); padding:22px; display:flex; flex-direction:column; gap:16px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:8px;">
+      <img src="images/logo.png" alt="ACORSER logo" style="height:48px; width:auto; object-fit:contain;" />
+      <button id="mobileMenuClose" aria-label="Close menu" style="width:42px; height:42px; border-radius:12px; border:1px solid rgba(16,24,39,0.08); background:#ffffff; font-size:24px; line-height:1; cursor:pointer;">×</button>
+    </div>
+    <a href="#home" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Home</a>
+    <a href="#overview" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Overview</a>
+    <a href="#services" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Services</a>
+    <a href="#clients" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Clients</a>
+    <a href="#team" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:#ffffff; border:1px solid rgba(16,24,39,0.06); font-weight:700; color:#223047;">Team</a>
+    <a href="#contact" class="mobile-link" style="padding:14px 16px; border-radius:16px; background:linear-gradient(135deg, #1098db, #4a46a3); font-weight:700; color:#ffffff;">Contact</a>
+
+    <div style="margin-top:auto; padding:18px; border-radius:22px; background:linear-gradient(135deg, #101827, #1d2d48); color:#ffffff;">
+      <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; font-weight:700; margin-bottom:8px;">Johannesburg Office</div>
+      <div style="font-size:14px; line-height:1.8; color:rgba(255,255,255,0.82);">2nd Floor Orion House, 49 Jorrissen Street<br/>Braamfontein - Johannesburg 2000</div>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="home" class="hero-section" style="
+position:relative;
+overflow:hidden;
+min-height:calc(100vh - 91px);
+display:flex;
+align-items:center;
+color:#ffffff;
+background:#08111d;
+">
+
+<style>
+@media (max-width: 980px) {
+  #home {
+    min-height: calc(100vh - 91px) !important;
+  }
+
+  #home .hero-inner {
+    padding: 24px 0 36px !important;
+  }
+
+  #home .hero-copy {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 460px !important;
+  }
+
+  #home .hero-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #home .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  #home .hero-actions a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    min-height: 54px !important;
+    padding: 0 20px !important;
+    border-radius: 14px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-align: center;
+  }
+
+  #home .hero-slide h1,
+  #home .hero-slide h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  #home .hero-slide p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
+  }
+}
+</style>
+
+<!-- BACKGROUND SLIDES -->
+
+<div class="hero-bg-slide" style="
+position:absolute;
+inset:0;
+background-image:linear-gradient(rgba(8,17,29,0.75),rgba(8,17,29,0.75)),url('images/hero1.jpg');
+background-size:cover;
+background-position:center;
+animation:slideFade 24s infinite;">
+</div>
+
+<div class="hero-bg-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+background-image:linear-gradient(rgba(8,17,29,0.75),rgba(8,17,29,0.75)),url('images/hero2.jpg');
+background-size:cover;
+background-position:center;
+animation:slideFade 24s infinite 6s;">
+</div>
+
+<div class="hero-bg-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+background-image:linear-gradient(rgba(8,17,29,0.75),rgba(8,17,29,0.75)),url('images/hero3.jpg');
+background-size:cover;
+background-position:center;
+animation:slideFade 24s infinite 12s;">
+</div>
+
+<div class="hero-bg-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+background-image:linear-gradient(rgba(8,17,29,0.75),rgba(8,17,29,0.75)),url('images/hero4.jpg');
+background-size:cover;
+background-position:center;
+animation:slideFade 24s infinite 18s;">
+</div>
+
+
+<!-- CONTENT -->
+
+<div class="hero-inner" style="
+position:relative;
+z-index:2;
+width:min(1100px,calc(100% - 32px));
+margin:0 auto;
+padding:40px 0 50px;
+display:flex;
+align-items:center;
+">
+
+<div class="hero-copy" style="position:relative;width:100%;max-width:720px;">
+
+
+<!-- SLIDE 1 -->
+
+<article class="hero-slide" style="
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+animation:slideFade 24s infinite;
+">
+
+<div>
+
+<div style="
+display:inline-block;
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.14);
+color:#b9e7ff;
+font-size:12px;
+font-weight:700;
+letter-spacing:0.16em;
+text-transform:uppercase;">
+Company Overview
+</div>
+
+<h1 style="
+margin:18px 0 0;
+font-size:clamp(2.4rem,5vw,4.2rem);
+line-height:1.05;
+letter-spacing:-0.03em;">
+Research, advisory and corporate training across Africa.
+</h1>
+
+<p style="
+margin:18px 0 0;
+font-size:17px;
+line-height:1.8;
+color:rgba(255,255,255,0.82);
+max-width:600px;">
+ACORSER is a South African firm with representative interests across multiple African countries, delivering specialist consulting, research and corporate training solutions for businesses, institutions and governments.
+</p>
+
+<div class="hero-actions" style="
+margin-top:26px;
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+">
+
+<a href="#overview" style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 24px;
+border-radius:999px;
+background:linear-gradient(135deg,#1098db,#4a46a3);
+color:#ffffff;
+font-size:14px;
+font-weight:700;
+text-decoration:none;">
+Explore Overview
+</a>
+
+<a href="#services" style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 24px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,0.18);
+background:rgba(255,255,255,0.06);
+color:#ffffff;
+font-size:14px;
+font-weight:700;
+text-decoration:none;">
+View Services
+</a>
+
+</div>
+</div>
+</article>
+
+<!-- SLIDE 2 -->
+
+<article class="hero-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+display:flex;
+align-items:center;
+animation:slideFade 24s infinite 6s;
+">
+
+<div>
+
+<div style="
+display:inline-block;
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.14);
+color:#b9e7ff;
+font-size:12px;
+font-weight:700;
+letter-spacing:0.16em;
+text-transform:uppercase;">
+Advisory Division
+</div>
+
+<h2 style="
+margin:18px 0 0;
+font-size:clamp(2.3rem,5vw,3.8rem);
+line-height:1.05;">
+Strategic advisory, compliance and corporate support.
+</h2>
+
+<p style="
+margin:18px 0 0;
+font-size:17px;
+line-height:1.8;
+color:rgba(255,255,255,0.82);
+max-width:600px;">
+The advisory division supports companies through regulatory compliance, corporate structuring, intellectual property management, market research, policy development and strategic management systems.
+</p>
+
+<div class="hero-actions" style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;">
+
+<a href="#services" style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 24px;
+border-radius:999px;
+background:linear-gradient(135deg,#1098db,#4a46a3);
+font-size:14px;
+font-weight:700;
+color:#fff;
+text-decoration:none;">
+Advisory Services
+</a>
+
+</div>
+</div>
+</article>
+
+<!-- SLIDE 3 -->
+
+<article class="hero-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+display:flex;
+align-items:center;
+animation:slideFade 24s infinite 12s;
+">
+
+<div>
+
+<div style="
+display:inline-block;
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.14);
+color:#b9e7ff;
+font-size:12px;
+font-weight:700;
+letter-spacing:0.16em;
+text-transform:uppercase;">
+Law Firm Division
+</div>
+
+<h2 style="
+margin:18px 0 0;
+font-size:clamp(2.3rem,5vw,3.8rem);
+line-height:1.05;">
+Legal advisory and regulatory expertise for modern business.
+</h2>
+
+<p style="
+margin:18px 0 0;
+font-size:17px;
+line-height:1.8;
+color:rgba(255,255,255,0.82);
+max-width:600px;">
+ACORSER also supports clients through legal consulting services including regulatory compliance, contract structuring, intellectual property protection and commercial advisory.
+</p>
+
+<div class="hero-actions" style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;">
+
+<a href="#services" style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 24px;
+border-radius:999px;
+background:linear-gradient(135deg,#1098db,#4a46a3);
+font-size:14px;
+font-weight:700;
+color:#fff;
+text-decoration:none;">
+Legal Services
+</a>
+
+</div>
+</div>
+</article>
+
+<!-- SLIDE 4 -->
+
+<article class="hero-slide" style="
+position:absolute;
+inset:0;
+opacity:0;
+display:flex;
+align-items:center;
+animation:slideFade 24s infinite 18s;
+">
+
+<div>
+
+<div style="
+display:inline-block;
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.14);
+color:#b9e7ff;
+font-size:12px;
+font-weight:700;
+letter-spacing:0.16em;
+text-transform:uppercase;">
+Acorser Academy
+</div>
+
+<h2 style="
+margin:18px 0 0;
+font-size:clamp(2.3rem,5vw,3.8rem);
+line-height:1.05;">
+Corporate training and capacity development.
+</h2>
+
+<p style="
+margin:18px 0 0;
+font-size:17px;
+line-height:1.8;
+color:rgba(255,255,255,0.82);
+max-width:600px;">
+Through Acorser Academy, the firm provides corporate workshops, professional training programmes, policy development support and skills development initiatives.
+</p>
+
+<div class="hero-actions" style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;">
+
+<a href="#services" style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 24px;
+border-radius:999px;
+background:linear-gradient(135deg,#1098db,#4a46a3);
+font-size:14px;
+font-weight:700;
+color:#fff;
+text-decoration:none;">
+Training Programs
+</a>
+
+</div>
+</div>
+</article>
+
+</div>
+</div>
+
+</section>
+
+    <section id="overview" style="
+position:relative;
+padding:92px 0;
+background:#ffffff;
+overflow:hidden;
+">
+
+  <div style="
+  position:relative;
+  z-index:1;
+  width:min(1200px,calc(100% - 32px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  gap:28px;
+  " class="overview-grid">
+
+   <div class="overview-reveal overview-left" style="
+padding:40px;
+border-radius:32px;
+background:linear-gradient(145deg,#101827,#19253a 60%,#223456);
+color:#ffffff;
+box-shadow:0 18px 40px rgba(16,24,39,0.12);
+transform:translateY(40px);
+opacity:0;
+transition:transform 0.8s ease, opacity 0.8s ease;
+position:relative;
+z-index:1;
+">
+  <div style="
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:#9edcff;
+  ">
+    Company Overview
+  </div>
+
+  <h2 style="
+  margin:16px 0 0;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.08;
+  letter-spacing:-0.03em;
+  ">
+    Specialist research, advisory and corporate training solutions across Africa.
+  </h2>
+
+  <p style="
+  margin:18px 0 0;
+  font-size:16px;
+  line-height:1.85;
+  color:rgba(255,255,255,0.78);
+  ">
+    ACORSER supports businesses, institutions and public sector organisations through research, regulatory advisory, compliance systems, project support, intellectual property management, strategic management services, marketing research, taxation, and debt recovery solutions.
+  </p>
+</div>
+
+    <div style="
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    ">
+
+      <!-- transparent africa map background only for right grid -->
+      <div style="
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background-image:url('images/map.png');
+      background-repeat:no-repeat;
+      background-position:center center;
+      background-size:460px;
+      opacity:0.20;
+      "></div>
+
+      <div class="overview-reveal" style="
+      position:relative;
+      z-index:1;
+      padding:24px;
+      border:1px solid rgba(16,24,39,0.08);
+      border-radius:24px;
+      background:rgba(248,251,254,0.92);
+      backdrop-filter:blur(2px);
+      box-shadow:0 10px 30px rgba(16,24,39,0.04);
+      transform:translateY(40px);
+      opacity:0;
+      transition:transform 0.8s ease, opacity 0.8s ease;
+      transition-delay:0.08s;
+      ">
+        <strong style="
+        display:block;
+        font-size:18px;
+        color:#102033;
+        margin-bottom:8px;
+        ">
+          Regional presence
+        </strong>
+        <span style="
+        font-size:15px;
+        line-height:1.75;
+        color:#5f6f86;
+        ">
+          South Africa headquarters with representative interests in Ghana, Nigeria, Cameroon, Rwanda, Kenya, Tanzania, Namibia, Zimbabwe, and Botswana.
+        </span>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">How long will it take to receive my order?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          Domestic Shipping: For orders within South Africa, standard shipping typically takes 3-7 business days. We also offer expedited shipping, which delivers in 1-3 business days for faster service.
-        </div>
+      <div class="overview-reveal" style="
+      position:relative;
+      z-index:1;
+      padding:24px;
+      border:1px solid rgba(16,24,39,0.08);
+      border-radius:24px;
+      background:rgba(248,251,254,0.92);
+      backdrop-filter:blur(2px);
+      box-shadow:0 10px 30px rgba(16,24,39,0.04);
+      transform:translateY(40px);
+      opacity:0;
+      transition:transform 0.8s ease, opacity 0.8s ease;
+      transition-delay:0.16s;
+      ">
+        <strong style="
+        display:block;
+        font-size:18px;
+        color:#102033;
+        margin-bottom:8px;
+        ">
+          Growth story
+        </strong>
+        <span style="
+        font-size:15px;
+        line-height:1.75;
+        color:#5f6f86;
+        ">
+          First formed in 2005, expanded its scope in 2008, and grew from four clients to more than fifty consistent clients.
+        </span>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">Can I use your products if I’m pregnant or breastfeeding?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          Yes, many of our products are safe to use during pregnancy and breastfeeding, as they contain natural and organic ingredients. However, please consider the following:
-          <br><br>
-          Consult Your Healthcare Provider: Always check with your healthcare provider before using any new skincare or wellness products during pregnancy or breastfeeding, especially if you have specific concerns or conditions.
-          <br><br>
-          Check Product Labels: Read the labels and product descriptions for any specific warnings or recommendations related to pregnancy and breastfeeding.
-          <br><br>
-          Avoid Certain Ingredients: Certain ingredients, such as essential oils (e.g., rosemary, clary sage, peppermint), retinoids, and salicylic acid, may not be suitable during pregnancy. Check the ingredient list carefully and avoid these substances unless approved by your healthcare provider.
-          <br><br>
-          Perform a Patch Test: Hormonal changes during pregnancy can make skin more sensitive. Test the product by applying a small amount to a small area of skin and wait 24 hours to check for any adverse reactions.
-          <br><br>
-          Use Gentle, Hydrating Products: Opt for gentle, hydrating products free from harsh chemicals or fragrances, as your skin may be more sensitive during this time.
-          <br><br>
-          At GhenOrganics, we strive to create safe, effective products for every stage of life. If you have concerns about using our products while pregnant or breastfeeding, don’t hesitate to reach out to our customer service team for more guidance.
-        </div>
+      <div class="overview-reveal" style="
+      position:relative;
+      z-index:1;
+      padding:24px;
+      border:1px solid rgba(16,24,39,0.08);
+      border-radius:24px;
+      background:rgba(248,251,254,0.92);
+      backdrop-filter:blur(2px);
+      box-shadow:0 10px 30px rgba(16,24,39,0.04);
+      transform:translateY(40px);
+      opacity:0;
+      transition:transform 0.8s ease, opacity 0.8s ease;
+      transition-delay:0.24s;
+      ">
+        <strong style="
+        display:block;
+        font-size:18px;
+        color:#102033;
+        margin-bottom:8px;
+        ">
+          Vision
+        </strong>
+        <span style="
+        font-size:15px;
+        line-height:1.75;
+        color:#5f6f86;
+        ">
+          To lead in core markets of fast-moving corporate services through superior service delivery and strong stakeholder partnerships.
+        </span>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">Are your products safe for children?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          Yes, many of our products are safe for children, thanks to our use of natural, gentle, and organic ingredients. However, children’s skin can be more sensitive than adults, so we recommend the following precautions:
-          <br><br>
-          Check Product Labels: Always review the product labels for any age-specific recommendations or warnings.
-          <br><br>
-          Patch Test First: Before applying a new product to your child, perform a patch test by applying a small amount on a small area of their skin. Wait 24 hours to check for any adverse reactions.
-          <br><br>
-          Consult with a Pediatrician: If you're unsure about a product’s suitability for your child, it’s best to consult with your pediatrician or healthcare provider.
-          <br><br>
-          Avoid Certain Ingredients: Some essential oils and strong botanicals may not be suitable for young children. Always check the ingredient list and avoid products with strong essential oils or other intense ingredients that could irritate a child’s delicate skin.
-          <br><br>
-          We are committed to transparency and ensuring the safety of all our products. If you have specific questions or concerns, feel free to contact our customer service team.
-        </div>
+      <div class="overview-reveal" style="
+      position:relative;
+      z-index:1;
+      padding:24px;
+      border:1px solid rgba(16,24,39,0.08);
+      border-radius:24px;
+      background:rgba(248,251,254,0.92);
+      backdrop-filter:blur(2px);
+      box-shadow:0 10px 30px rgba(16,24,39,0.04);
+      transform:translateY(40px);
+      opacity:0;
+      transition:transform 0.8s ease, opacity 0.8s ease;
+      transition-delay:0.32s;
+      ">
+        <strong style="
+        display:block;
+        font-size:18px;
+        color:#102033;
+        margin-bottom:8px;
+        ">
+          Mission
+        </strong>
+        <span style="
+        font-size:15px;
+        line-height:1.75;
+        color:#5f6f86;
+        ">
+          To be a world-class firm where research and services are outstanding, tailored, and delivered for the success of clients.
+        </span>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">What ingredients do you use in your products?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          We use a variety of organic plant extracts and natural ingredients in our products. Our focus is on harnessing the power of nature to deliver effective, nourishing skincare and wellness solutions.
-        </div>
+    </div>
+  </div>
+
+  <style>
+    #overview .overview-reveal.is-visible{
+      opacity:1 !important;
+      transform:translateY(0) !important;
+    }
+
+    @media (max-width: 980px){
+      #overview .overview-grid{
+        grid-template-columns:1fr !important;
+      }
+    }
+
+    @media (max-width: 768px){
+      #overview{
+        padding:72px 0 !important;
+      }
+
+      #overview .overview-grid{
+        gap:20px !important;
+      }
+
+      #overview .overview-grid > div:first-child{
+        padding:28px !important;
+        border-radius:24px !important;
+      }
+
+      #overview .overview-grid > div:last-child{
+        grid-template-columns:1fr !important;
+      }
+
+      #overview .overview-grid > div:last-child > div:first-child{
+        background-position:center center !important;
+        background-size:72vw !important;
+        opacity:0.015 !important;
+      }
+    }
+
+    @media (max-width: 768px){
+  #overview .overview-grid > div:last-child > div:first-child{
+    background-position:center center !important;
+    background-size:95vw !important;
+    opacity:0.12 !important;
+  }
+}
+  </style>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const items = document.querySelectorAll('#overview .overview-reveal');
+
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  items.forEach(function(item){
+    observer.observe(item);
+  });
+});
+</script>
+
+    <section id="services" style="
+position:relative;
+padding:92px 0;
+background:#eef5fb;
+overflow:hidden;
+">
+  <div style="width:min(1200px,calc(100% - 32px));margin:0 auto;position:relative;z-index:1;">
+
+    <div class="services-reveal" style="max-width:820px;margin-bottom:38px;opacity:0;transform:translateY(36px);transition:transform 0.8s ease, opacity 0.8s ease;">
+      <div style="
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.22em;
+      text-transform:uppercase;
+      color:#1098db;
+      margin-bottom:14px;">
+        Services & Divisions
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" data-aos="fade-up">How should I store my products?</div>
-        <div class="faq-answer" data-aos="fade-up">
-          To maintain the effectiveness of your GhenOrganics products, please follow these storage guidelines:
-          <br><br>
-          Store in a Cool, Dry Place: Keep your products in a cool, dry environment, away from direct sunlight, heat, and moisture, to preserve their potency.
-          <br><br>
-          Seal Tightly: Ensure that all containers are tightly sealed after use to protect the products from air and moisture, which can degrade their quality.
-          <br><br>
-          Avoid Refrigeration: Most of our products do not require refrigeration unless stated otherwise on the product label. Room temperature storage is usually sufficient.
-          <br><br>
-          Use Clean Hands or Utensils: For products in jars or tubs, always use clean hands or utensils to avoid contaminating the product with bacteria.
-          <br><br>
-          Follow Specific Instructions: Some products may have unique storage needs outlined on their labels. Please follow these instructions to ensure the best performance.
-          <br><br>
-          By following these simple storage tips, you can ensure that your GhenOrganics products remain effective and safe to use for as long as possible.
-        </div>
+      <h2 style="
+      margin:0;
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.08;
+      letter-spacing:-0.03em;
+      color:#102033;">
+        ACORSER operates through research and advisory, legal and regulatory support, and corporate training capabilities.
+      </h2>
+
+      <p style="
+margin:18px 0 0;
+font-size:18px;
+line-height:1.8;
+color:#607089;">
+ACORSER provides integrated research, advisory, legal support, compliance, and corporate training services to help organisations operate, grow, and respond effectively to complex business environments.
+</p>
     </div>
 
-        <div class="faq-item">
-          <div class="faq-question" data-aos="fade-up">What is your return and refund policy?</div>
-          <div class="faq-answer" data-aos="fade-up">
-            We accept returns only if the product is damaged or defective upon delivery. You must notify us within 7 days of receiving your order. Returned items must be unused, in original packaging, and include proof of purchase.
-            <br><br>
-            Due to the nature of our wellness products, we do not accept returns for opened or used items unless they were damaged during shipping.
-            <br><br>
-            If your return is approved, you may choose a refund, store credit, or product exchange. Refunds are processed within 7–10 business days after we receive and inspect the returned item.
-            <br><br>
-            For full details, please read our <a href="return-policy.html" target="_blank">Return & Refund Policy</a> page.
+    <div class="services-grid" style="
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;">
+
+      <article class="services-reveal" style="
+padding:30px;
+border-radius:28px;
+background:#ffffff;
+border:1px solid rgba(16,24,39,0.08);
+box-shadow:0 12px 28px rgba(16,24,39,0.06);
+opacity:0;
+transform:translateY(36px);
+transition:transform 0.8s ease, opacity 0.8s ease;
+transition-delay:0.08s;
+display:flex;
+flex-direction:column;
+height:100%;
+">
+  <div style="
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(16,152,219,0.16), rgba(74,70,163,0.22));
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#173a6a;
+  font-size:22px;">
+    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+  </div>
+
+  <h3 style="margin:0;font-size:24px;color:#102033;">Research &amp; Advisory</h3>
+
+  <p style="
+  margin:12px 0 0;
+  font-size:16px;
+  line-height:1.8;
+  color:#617189;
+  flex-grow:1;">
+    ACORSER provides legal and regulatory research, policy and market intelligence, management and business development research, intellectual property support, and political risk analysis tailored to organisations operating across multiple African markets.
+  </p>
+
+  <div style="margin-top:20px;">
+    <a href="advisory.html" style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:0 18px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#1098db,#4a46a3);
+    color:#ffffff;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 10px 22px rgba(16,152,219,0.18);
+    ">
+      View Advisory Services
+    </a>
+  </div>
+</article>
+
+<article class="services-reveal" style="
+padding:30px;
+border-radius:28px;
+background:#ffffff;
+border:1px solid rgba(16,24,39,0.08);
+box-shadow:0 12px 28px rgba(16,24,39,0.06);
+opacity:0;
+transform:translateY(36px);
+transition:transform 0.8s ease, opacity 0.8s ease;
+transition-delay:0.16s;
+display:flex;
+flex-direction:column;
+height:100%;
+">
+  <div style="
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(16,152,219,0.16), rgba(74,70,163,0.22));
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#173a6a;
+  font-size:22px;">
+    <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+  </div>
+
+  <h3 style="margin:0;font-size:24px;color:#102033;">Legal, Compliance &amp; Support</h3>
+
+  <p style="
+  margin:12px 0 0;
+  font-size:16px;
+  line-height:1.8;
+  color:#617189;
+  flex-grow:1;">
+    The firm supports clients with company and trust formation, restructuring, compliance systems, contracts, debt recovery, intellectual property registration, tenders, franchise matters, and licence or mining-related regulatory support.
+  </p>
+
+  <div style="margin-top:20px;">
+    <a href="law-firm.html" style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:0 18px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#1098db,#4a46a3);
+    color:#ffffff;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 10px 22px rgba(16,152,219,0.18);
+    ">
+      View Legal Services
+    </a>
+  </div>
+</article>
+
+<article class="services-reveal" style="
+padding:30px;
+border-radius:28px;
+background:#ffffff;
+border:1px solid rgba(16,24,39,0.08);
+box-shadow:0 12px 28px rgba(16,24,39,0.06);
+opacity:0;
+transform:translateY(36px);
+transition:transform 0.8s ease, opacity 0.8s ease;
+transition-delay:0.24s;
+display:flex;
+flex-direction:column;
+height:100%;
+">
+  <div style="
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(16,152,219,0.16), rgba(74,70,163,0.22));
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#173a6a;
+  font-size:22px;">
+    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+  </div>
+
+  <h3 style="margin:0;font-size:24px;color:#102033;">Acorser Academy</h3>
+
+  <p style="
+  margin:12px 0 0;
+  font-size:16px;
+  line-height:1.8;
+  color:#617189;
+  flex-grow:1;">
+    Through Acorser Academy, the firm delivers training needs analysis, workshop design, conference support, course material development, facilitator coordination, education policy support, and accreditation-related advisory services.
+  </p>
+
+  <div style="margin-top:20px;">
+    <a href="academy.html" style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:0 18px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#1098db,#4a46a3);
+    color:#ffffff;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 10px 22px rgba(16,152,219,0.18);
+    ">
+      View Training Programs
+    </a>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+  <style>
+    #services .services-reveal.is-visible{
+      opacity:1 !important;
+      transform:translateY(0) !important;
+    }
+
+    @media (max-width: 980px){
+      #services .services-grid{
+        grid-template-columns:1fr !important;
+      }
+    }
+
+    @media (max-width: 768px){
+      #services{
+        padding:72px 0 !important;
+      }
+
+      #services .services-grid{
+        gap:18px !important;
+      }
+
+      #services article{
+        padding:24px !important;
+        border-radius:24px !important;
+      }
+
+      #services h3{
+        font-size:22px !important;
+      }
+    }
+  </style>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const serviceItems = document.querySelectorAll('#services .services-reveal');
+
+  const serviceObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        serviceObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  serviceItems.forEach(function(item){
+    serviceObserver.observe(item);
+  });
+});
+</script>
+
+    <section id="team" style="
+position:relative;
+padding:100px 0;
+background:
+linear-gradient(rgba(255,255,255,0.52), rgba(255,255,255,0.52)),
+url('images/team-bg.jpg') center/cover fixed no-repeat;
+overflow:hidden;
+">
+
+<div style="
+width:min(1200px,calc(100% - 32px));
+margin:0 auto;
+position:relative;
+z-index:1;
+">
+
+<div class="team-reveal" style="
+text-align:center;
+max-width:760px;
+margin:0 auto 60px;
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+">
+
+<div style="
+font-size:13px;
+font-weight:800;
+letter-spacing:.25em;
+text-transform:uppercase;
+color:#1098db;
+margin-bottom:16px;">
+Leadership
+</div>
+
+<h2 style="
+margin:0;
+font-size:clamp(2.2rem,4vw,3rem);
+color:#102033;
+line-height:1.1;">
+Leadership shaped by research, advisory, legal support and corporate training expertise.
+</h2>
+
+<p style="
+margin-top:18px;
+font-size:18px;
+line-height:1.8;
+color:#011431;">
+ACORSER’s leadership team brings together experience in policy research, legal advisory, governance, business support and professional training across public and private sectors.
+</p>
+
+</div>
+
+
+<div class="team-grid" style="
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:32px;
+">
+
+<!-- MEMBER 1 -->
+<article class="team-card team-reveal">
+
+<div class="team-img">
+<img src="images/dir1.png" alt="Tshepo Moloi">
+</div>
+
+<h3>Tshepo Moloi</h3>
+<span>Chairman of the Board</span>
+
+<p>
+Researcher and policy analyst with experience in economic policy, political risk analysis, rural development, corporate governance training and cross-border research initiatives.
+</p>
+
+</article>
+
+
+<!-- MEMBER 2 -->
+<article class="team-card team-reveal">
+
+<div class="team-img">
+<img src="images/dir1.png" alt="Martins Mbah Njah">
+</div>
+
+<h3>Martins Mbah Njah</h3>
+<span>Director / Chief Consulting Officer</span>
+
+<p>
+Researcher and legal consultant with expertise in venture creation, international trade finance, securities regulation, compliance, governance and business systems simplification.
+</p>
+
+</article>
+
+
+<!-- MEMBER 3 -->
+<article class="team-card team-reveal">
+
+<div class="team-img">
+<img src="images/dir1.png" alt="Thembinkosi Tshabalala">
+</div>
+
+<h3>Thembinkosi Tshabalala</h3>
+<span>Training Director</span>
+
+<p>
+Leads the Acorser Academy focusing on corporate training coordination, workshop design, learning support and the expansion of training services.
+</p>
+
+</article>
+
+</div>
+</div>
+
+
+
+<style>
+
+/* GRID */
+
+#team .team-grid{
+align-items:stretch;
+}
+
+/* CARD */
+
+#team .team-card{
+background:white;
+border-radius:26px;
+padding:34px 28px 30px;
+text-align:center;
+border:1px solid rgba(0,0,0,0.06);
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
+transition:.35s;
+opacity:0;
+transform:translateY(40px);
+}
+
+/* IMAGE */
+
+#team .team-img{
+width:120px;
+height:120px;
+margin:0 auto 18px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+#team .team-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+/* TEXT */
+
+#team .team-card h3{
+margin:10px 0 6px;
+font-size:22px;
+color:#102033;
+}
+
+#team .team-card span{
+font-size:13px;
+font-weight:800;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:#1098db;
+display:block;
+margin-bottom:12px;
+}
+
+#team .team-card p{
+font-size:15px;
+line-height:1.75;
+color:#617189;
+}
+
+/* HOVER */
+
+#team .team-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+#team .team-card:hover img{
+transform:scale(1.08);
+}
+
+/* ANIMATION */
+
+#team .team-reveal.is-visible{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+#team .team-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:680px){
+
+#team .team-grid{
+grid-template-columns:1fr;
+}
+
+#team{
+padding:70px 0;
+}
+
+}
+
+</style>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const items=document.querySelectorAll("#team .team-reveal");
+
+const observer=new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+entry.target.classList.add("is-visible");
+observer.unobserve(entry.target);
+}
+
+});
+
+},{threshold:.2});
+
+items.forEach(function(el){
+observer.observe(el);
+});
+
+});
+</script>
+
+
+<section id="why-choose-us" style="
+position:relative;
+padding:92px 0;
+background:#07111d;
+overflow:hidden;
+color:#ffffff;
+">
+
+  <div style="
+  width:min(1200px,calc(100% - 32px));
+  margin:0 auto;
+  ">
+
+    <div class="why-choose-reveal" style="
+    max-width:760px;
+    margin:0 auto 38px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(36px);
+    transition:transform .8s ease, opacity .8s ease;
+    ">
+      <div style="
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#9edcff;
+      margin-bottom:14px;
+      ">
+        Why Choose Us
+      </div>
+
+      <h2 style="
+      margin:0;
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.08;
+      letter-spacing:-0.03em;
+      color:#ffffff;
+      ">
+        Specialist support for organisations operating across complex African markets.
+      </h2>
+
+      <p style="
+      margin:18px 0 0;
+      font-size:18px;
+      line-height:1.8;
+      color:rgba(255,255,255,0.76);
+      ">
+        ACORSER combines regional insight, advisory depth, legal and compliance support, and training capability to deliver practical solutions for business, institutional and public sector clients.
+      </p>
+    </div>
+
+    <div class="why-slider-shell why-choose-reveal" style="
+    position:relative;
+    opacity:0;
+    transform:translateY(36px);
+    transition:transform .8s ease, opacity .8s ease;
+    transition-delay:.08s;
+    ">
+
+      <button class="why-nav why-prev" aria-label="Previous slide" style="
+      position:absolute;
+      left:-10px;
+      top:50%;
+      transform:translateY(-50%);
+      z-index:5;
+      width:52px;
+      height:52px;
+      border:none;
+      border-radius:50%;
+      background:rgba(0,0,0,0.55);
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,0.24);
+      ">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+
+      <button class="why-nav why-next" aria-label="Next slide" style="
+      position:absolute;
+      right:-10px;
+      top:50%;
+      transform:translateY(-50%);
+      z-index:5;
+      width:52px;
+      height:52px;
+      border:none;
+      border-radius:50%;
+      background:rgba(0,0,0,0.55);
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,0.24);
+      ">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+
+      <div class="why-slides" style="
+      position:relative;
+      min-height:640px;
+      border-radius:32px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#101827,#0b1626);
+      box-shadow:0 24px 60px rgba(0,0,0,0.28);
+      ">
+
+        <!-- SLIDE 1 -->
+        <article class="why-slide is-active" data-index="0" style="
+        position:absolute;
+        inset:0;
+        opacity:1;
+        pointer-events:auto;
+        transition:opacity .7s ease;
+        ">
+          <div style="
+          position:absolute;
+          inset:0;
+          background:
+          linear-gradient(rgba(6,12,22,0.72),rgba(6,12,22,0.72)),
+          url('images/why-map.png') center/contain no-repeat;
+          opacity:0;
+          transform:scale(.96);
+          transition:opacity .9s ease, transform 1.1s ease;
+          " class="why-bg"></div>
+
+          <div style="
+          position:relative;
+          z-index:2;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          padding:48px 32px 86px;
+          ">
+            <h3 style="
+            margin:0 0 24px;
+            font-size:clamp(1.8rem,3vw,2.6rem);
+            line-height:1.15;
+            font-weight:800;
+            color:#ffffff;
+            ">
+              Our company is represented in key African markets.
+            </h3>
+
+            <div style="
+            position:relative;
+            width:min(760px,100%);
+            height:340px;
+            max-width:100%;
+            ">
+              <div class="why-callout" style="
+              position:absolute;
+              top:28%;
+              left:6%;
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .35s;
+              color:#ffffff;
+              font-size:clamp(1rem,1.5vw,1.2rem);
+              font-weight:700;
+              text-shadow:0 2px 10px rgba(0,0,0,0.35);
+              ">
+                Ghana
+              </div>
+
+              <div class="why-callout" style="
+              position:absolute;
+              top:52%;
+              left:12%;
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .7s;
+              color:#ffffff;
+              font-size:clamp(1rem,1.5vw,1.2rem);
+              font-weight:700;
+              text-shadow:0 2px 10px rgba(0,0,0,0.35);
+              ">
+                Nigeria, Cameroon
+              </div>
+
+              <div class="why-callout" style="
+              position:absolute;
+              top:28%;
+              right:4%;
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease 1.05s;
+              color:#ffffff;
+              font-size:clamp(1rem,1.5vw,1.2rem);
+              font-weight:700;
+              text-shadow:0 2px 10px rgba(0,0,0,0.35);
+              ">
+                Kenya, Rwanda, Tanzania
+              </div>
+
+              <div class="why-callout" style="
+              position:absolute;
+              bottom:8%;
+              right:2%;
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease 1.4s;
+              color:#ffffff;
+              font-size:clamp(1rem,1.5vw,1.2rem);
+              font-weight:700;
+              text-shadow:0 2px 10px rgba(0,0,0,0.35);
+              ">
+                South Africa, Zimbabwe,<br>Namibia and Botswana
+              </div>
+            </div>
           </div>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="why-slide" data-index="1" style="
+        position:absolute;
+        inset:0;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .7s ease;
+        ">
+          <div style="
+          position:absolute;
+          inset:0;
+          background:
+          linear-gradient(rgba(6,12,22,0.58),rgba(6,12,22,0.68)),
+          url('images/why-advisory.jpg') center/cover no-repeat;
+          opacity:0;
+          transform:scale(.96);
+          transition:opacity .9s ease, transform 1.1s ease;
+          " class="why-bg"></div>
+
+          <div style="
+          position:relative;
+          z-index:2;
+          height:100%;
+          display:grid;
+          grid-template-columns:1.1fr .9fr;
+          gap:24px;
+          align-items:center;
+          padding:48px;
+          ">
+            <div>
+              <div style="
+              display:inline-block;
+              padding:10px 16px;
+              border-radius:999px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.14);
+              color:#b9e7ff;
+              font-size:12px;
+              font-weight:700;
+              letter-spacing:.16em;
+              text-transform:uppercase;
+              ">
+                Research & Advisory
+              </div>
+
+              <h3 style="
+              margin:18px 0 0;
+              font-size:clamp(2rem,4vw,3rem);
+              line-height:1.06;
+              letter-spacing:-0.03em;
+              ">
+                Decisions supported by credible research and market intelligence.
+              </h3>
+
+              <p style="
+              margin:18px 0 0;
+              font-size:17px;
+              line-height:1.85;
+              color:rgba(255,255,255,0.82);
+              max-width:620px;
+              ">
+                ACORSER delivers legal and regulatory environment research, policy analysis, management and market research, business development research, intellectual property support, and political risk insight for organisations working across multiple sectors.
+              </p>
+            </div>
+
+            <div style="
+            display:grid;
+            gap:14px;
+            ">
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .35s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              backdrop-filter:blur(8px);
+              ">
+                <strong style="display:block;font-size:18px;margin-bottom:6px;">Policy insight</strong>
+                <span style="font-size:15px;line-height:1.75;color:rgba(255,255,255,0.74);">Research-led support for strategy, market entry and business decisions.</span>
+              </div>
+
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .7s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              backdrop-filter:blur(8px);
+              ">
+                <strong style="display:block;font-size:18px;margin-bottom:6px;">Regional context</strong>
+                <span style="font-size:15px;line-height:1.75;color:rgba(255,255,255,0.74);">Support informed by business and policy dynamics across African markets.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="why-slide" data-index="2" style="
+        position:absolute;
+        inset:0;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .7s ease;
+        ">
+          <div style="
+          position:absolute;
+          inset:0;
+          background:
+          linear-gradient(rgba(6,12,22,0.6),rgba(6,12,22,0.7)),
+          url('images/why-legal.jpg') center/cover no-repeat;
+          opacity:0;
+          transform:scale(.96);
+          transition:opacity .9s ease, transform 1.1s ease;
+          " class="why-bg"></div>
+
+          <div style="
+          position:relative;
+          z-index:2;
+          height:100%;
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:24px;
+          align-items:end;
+          padding:48px;
+          ">
+            <div>
+              <div style="
+              display:inline-block;
+              padding:10px 16px;
+              border-radius:999px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.14);
+              color:#b9e7ff;
+              font-size:12px;
+              font-weight:700;
+              letter-spacing:.16em;
+              text-transform:uppercase;
+              ">
+                Legal, Compliance & Support
+              </div>
+
+              <h3 style="
+              margin:18px 0 0;
+              font-size:clamp(2rem,4vw,3rem);
+              line-height:1.06;
+              letter-spacing:-0.03em;
+              ">
+                Practical support for structuring, compliance and business operations.
+              </h3>
+
+              <p style="
+              margin:18px 0 0;
+              font-size:17px;
+              line-height:1.85;
+              color:rgba(255,255,255,0.82);
+              max-width:620px;
+              ">
+                The firm supports clients with company and trust formation, restructuring, compliance systems, contract documentation, intellectual property registration, tenders, debt recovery, franchise matters, and licence-related advisory.
+              </p>
+            </div>
+
+            <div style="
+            display:grid;
+            gap:14px;
+            align-self:center;
+            ">
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .35s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:18px;margin-bottom:6px;">Structuring support</strong>
+                <span style="font-size:15px;line-height:1.75;color:rgba(255,255,255,0.74);">Entity formation, restructuring and business implementation support.</span>
+              </div>
+
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .7s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:18px;margin-bottom:6px;">Regulatory depth</strong>
+                <span style="font-size:15px;line-height:1.75;color:rgba(255,255,255,0.74);">Support across contracts, compliance procedures and operational risk areas.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 4 -->
+        <article class="why-slide" data-index="3" style="
+        position:absolute;
+        inset:0;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .7s ease;
+        ">
+          <div style="
+          position:absolute;
+          inset:0;
+          background:
+          linear-gradient(rgba(6,12,22,0.62),rgba(6,12,22,0.68)),
+          url('images/why-training.jpg') center/cover no-repeat;
+          opacity:0;
+          transform:scale(.96);
+          transition:opacity .9s ease, transform 1.1s ease;
+          " class="why-bg"></div>
+
+          <div style="
+          position:relative;
+          z-index:2;
+          height:100%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          padding:48px 32px 86px;
+          ">
+            <div style="max-width:820px;">
+              <div style="
+              display:inline-block;
+              padding:10px 16px;
+              border-radius:999px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.14);
+              color:#b9e7ff;
+              font-size:12px;
+              font-weight:700;
+              letter-spacing:.16em;
+              text-transform:uppercase;
+              ">
+                Acorser Academy
+              </div>
+
+              <h3 style="
+              margin:18px 0 0;
+              font-size:clamp(2rem,4vw,3rem);
+              line-height:1.08;
+              letter-spacing:-0.03em;
+              ">
+                Training and capacity-building that turns advice into action.
+              </h3>
+
+              <p style="
+              margin:18px auto 0;
+              font-size:17px;
+              line-height:1.85;
+              color:rgba(255,255,255,0.82);
+              max-width:720px;
+              ">
+                Through Acorser Academy, the firm supports training needs analysis, workshop design, course material preparation, facilitator support, policy development, and accreditation-related advisory.
+              </p>
+
+              <div style="
+              margin-top:22px;
+              display:grid;
+              grid-template-columns:repeat(3,1fr);
+              gap:14px;
+              ">
+                <div class="why-callout" style="
+                opacity:0;
+                transform:translateY(14px);
+                transition:all .55s ease .35s;
+                padding:16px 18px;
+                border-radius:18px;
+                background:rgba(255,255,255,0.08);
+                border:1px solid rgba(255,255,255,0.10);
+                ">
+                  <strong style="display:block;font-size:16px;margin-bottom:5px;">Need analysis</strong>
+                  <span style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.74);">Training designed around real organisational requirements.</span>
+                </div>
+
+                <div class="why-callout" style="
+                opacity:0;
+                transform:translateY(14px);
+                transition:all .55s ease .7s;
+                padding:16px 18px;
+                border-radius:18px;
+                background:rgba(255,255,255,0.08);
+                border:1px solid rgba(255,255,255,0.10);
+                ">
+                  <strong style="display:block;font-size:16px;margin-bottom:5px;">Workshop support</strong>
+                  <span style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.74);">Planning, facilitation and materials for forums and events.</span>
+                </div>
+
+                <div class="why-callout" style="
+                opacity:0;
+                transform:translateY(14px);
+                transition:all .55s ease 1.05s;
+                padding:16px 18px;
+                border-radius:18px;
+                background:rgba(255,255,255,0.08);
+                border:1px solid rgba(255,255,255,0.10);
+                ">
+                  <strong style="display:block;font-size:16px;margin-bottom:5px;">Accreditation support</strong>
+                  <span style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.74);">Guidance for institutions and organisations pursuing training standards.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 5 -->
+        <article class="why-slide" data-index="4" style="
+        position:absolute;
+        inset:0;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .7s ease;
+        ">
+          <div style="
+          position:absolute;
+          inset:0;
+          background:
+          linear-gradient(rgba(6,12,22,0.6),rgba(6,12,22,0.7)),
+          url('images/why-resources.jpg') center/cover no-repeat;
+          opacity:0;
+          transform:scale(.96);
+          transition:opacity .9s ease, transform 1.1s ease;
+          " class="why-bg"></div>
+
+          <div style="
+          position:relative;
+          z-index:2;
+          height:100%;
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:24px;
+          align-items:center;
+          padding:48px;
+          ">
+            <div>
+              <div style="
+              display:inline-block;
+              padding:10px 16px;
+              border-radius:999px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.14);
+              color:#b9e7ff;
+              font-size:12px;
+              font-weight:700;
+              letter-spacing:.16em;
+              text-transform:uppercase;
+              ">
+                Knowledge Resources
+              </div>
+
+              <h3 style="
+              margin:18px 0 0;
+              font-size:clamp(2rem,4vw,3rem);
+              line-height:1.06;
+              letter-spacing:-0.03em;
+              ">
+                A knowledge-driven firm built around people, research tools and regional access.
+              </h3>
+
+              <p style="
+              margin:18px 0 0;
+              font-size:17px;
+              line-height:1.85;
+              color:rgba(255,255,255,0.82);
+              max-width:620px;
+              ">
+                The business profile positions ACORSER as a knowledge and information centre supported by consultants, staff development, cross-border access, and research resources that strengthen service delivery.
+              </p>
+            </div>
+
+            <div style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:14px;
+            ">
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .35s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:17px;margin-bottom:6px;">Regional access</strong>
+                <span style="font-size:14px;line-height:1.75;color:rgba(255,255,255,0.74);">Representative interests across several African countries.</span>
+              </div>
+
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease .7s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:17px;margin-bottom:6px;">Human capital</strong>
+                <span style="font-size:14px;line-height:1.75;color:rgba(255,255,255,0.74);">A strong focus on recruiting, training and retraining people.</span>
+              </div>
+
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease 1.05s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:17px;margin-bottom:6px;">Research tools</strong>
+                <span style="font-size:14px;line-height:1.75;color:rgba(255,255,255,0.74);">Access to current information, software and research databases.</span>
+              </div>
+
+              <div class="why-callout" style="
+              opacity:0;
+              transform:translateY(14px);
+              transition:all .55s ease 1.4s;
+              padding:18px 20px;
+              border-radius:20px;
+              background:rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.10);
+              ">
+                <strong style="display:block;font-size:17px;margin-bottom:6px;">Client growth</strong>
+                <span style="font-size:14px;line-height:1.75;color:rgba(255,255,255,0.74);">Growth from an early small client base to consistent repeat work.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
+
+      <div class="why-dots" style="
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+      ">
+        <button class="why-dot is-active" aria-label="Go to slide 1" style="width:10px;height:10px;border:none;border-radius:50%;background:rgba(255,255,255,0.28);cursor:pointer;"></button>
+        <button class="why-dot" aria-label="Go to slide 2" style="width:10px;height:10px;border:none;border-radius:50%;background:rgba(255,255,255,0.28);cursor:pointer;"></button>
+        <button class="why-dot" aria-label="Go to slide 3" style="width:10px;height:10px;border:none;border-radius:50%;background:rgba(255,255,255,0.28);cursor:pointer;"></button>
+        <button class="why-dot" aria-label="Go to slide 4" style="width:10px;height:10px;border:none;border-radius:50%;background:rgba(255,255,255,0.28);cursor:pointer;"></button>
+        <button class="why-dot" aria-label="Go to slide 5" style="width:10px;height:10px;border:none;border-radius:50%;background:rgba(255,255,255,0.28);cursor:pointer;"></button>
+      </div>
+
     </div>
-  </section>
+  </div>
 
-  <footer>
-    <p>2025 Ghenorganics | By <a href="https://www.valoyitech.co.za/" target="_blank">Hector Baloyi</a></p>
-  </footer>
+  <style>
+    #why-choose-us .why-choose-reveal.is-visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
 
-  <!-- Modal for Product Details -->
-  <div id="product-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <div class="modal-header">
-        <h2 id="modal-product-name"></h2>
-        <p class="price" id="modal-product-price"></p>
+#why-choose-us .why-slide{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+  transition:opacity .45s ease, visibility 0s linear .45s !important;
+}
+
+#why-choose-us .why-slide.is-active{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  z-index:2 !important;
+  transition:opacity .45s ease !important;
+}
+
+#why-choose-us .why-bg{
+  opacity:0 !important;
+  transform:scale(.985) !important;
+  transition:opacity .55s ease, transform .7s ease !important;
+}
+
+#why-choose-us .why-slide.is-active .why-bg{
+  opacity:1 !important;
+  transform:scale(1) !important;
+}
+
+#why-choose-us .why-callout{
+  opacity:0 !important;
+  transform:translateY(14px) !important;
+}
+
+#why-choose-us .why-slide.is-active .why-callout{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+#why-choose-us .why-dot.is-active{
+  background:#1098db !important;
+  box-shadow:0 0 0 6px rgba(16,152,219,0.16);
+}
+
+#why-choose-us .why-nav:hover{
+  background:rgba(16,152,219,0.9) !important;
+}
+
+@media (max-width: 980px){
+  #why-choose-us .why-slide > div[style*="grid-template-columns:1.1fr .9fr"],
+  #why-choose-us .why-slide > div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width: 768px){
+  #why-choose-us{
+    padding:72px 0 !important;
+  }
+
+  #why-choose-us .why-slides{
+    min-height:820px !important;
+    border-radius:24px !important;
+  }
+
+  #why-choose-us .why-slide > div[style*="padding:48px"]{
+    padding:28px 20px 86px !important;
+  }
+
+  #why-choose-us .why-nav{
+    width:44px !important;
+    height:44px !important;
+    top:auto !important;
+    bottom:72px !important;
+    transform:none !important;
+  }
+
+  #why-choose-us .why-prev{
+    left:14px !important;
+  }
+
+  #why-choose-us .why-next{
+    right:14px !important;
+  }
+
+  #why-choose-us .why-callout{
+    font-size:14px !important;
+  }
+
+  #why-choose-us .why-slide[data-index="0"] .why-callout:nth-child(1){
+    top:16% !important;
+    left:0 !important;
+  }
+
+  #why-choose-us .why-slide[data-index="0"] .why-callout:nth-child(2){
+    top:58% !important;
+    left:2% !important;
+  }
+
+  #why-choose-us .why-slide[data-index="0"] .why-callout:nth-child(3){
+    top:14% !important;
+    right:0 !important;
+    text-align:right !important;
+  }
+
+  #why-choose-us .why-slide[data-index="0"] .why-callout:nth-child(4){
+    bottom:2% !important;
+    right:0 !important;
+    text-align:right !important;
+  }
+
+  #why-choose-us .why-slide[data-index="3"] > div{
+    display:block !important;
+    text-align:left !important;
+    padding-top:42px !important;
+  }
+
+  #why-choose-us .why-slide[data-index="3"] div[style*="max-width:820px"]{
+    max-width:100% !important;
+  }
+
+  #why-choose-us .why-slide[data-index="3"] div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important;
+    margin-top:18px !important;
+  }
+
+  #why-choose-us .why-slide[data-index="3"] h3{
+    margin-top:16px !important;
+  }
+
+  #why-choose-us .why-slide[data-index="4"] div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+}
+  </style>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const section = document.getElementById('why-choose-us');
+  if(!section) return;
+
+  const revealItems = section.querySelectorAll('.why-choose-reveal');
+  const slides = Array.from(section.querySelectorAll('.why-slide'));
+  const dots = Array.from(section.querySelectorAll('.why-dot'));
+  const prev = section.querySelector('.why-prev');
+  const next = section.querySelector('.why-next');
+  let active = 0;
+  let timer = null;
+
+  function showSlide(index){
+    active = (index + slides.length) % slides.length;
+
+    slides.forEach(function(slide, i){
+      slide.classList.toggle('is-active', i === active);
+    });
+
+    dots.forEach(function(dot, i){
+      dot.classList.toggle('is-active', i === active);
+    });
+  }
+
+  function startAuto(){
+    stopAuto();
+    timer = setInterval(function(){
+      showSlide(active + 1);
+    }, 5200);
+  }
+
+  function stopAuto(){
+    if(timer) clearInterval(timer);
+  }
+
+  if(prev){
+    prev.addEventListener('click', function(){
+      showSlide(active - 1);
+      startAuto();
+    });
+  }
+
+  if(next){
+    next.addEventListener('click', function(){
+      showSlide(active + 1);
+      startAuto();
+    });
+  }
+
+  dots.forEach(function(dot, i){
+    dot.addEventListener('click', function(){
+      showSlide(i);
+      startAuto();
+    });
+  });
+
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        revealItems.forEach(function(item){ item.classList.add('is-visible'); });
+        startAuto();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(section);
+
+  section.addEventListener('mouseenter', stopAuto);
+  section.addEventListener('mouseleave', startAuto);
+
+  showSlide(0);
+});
+</script>
+
+
+<section id="clients" style="
+position:relative;
+padding:92px 0;
+background:linear-gradient(180deg,#f8fbff 0%, #eef5fb 100%);
+overflow:hidden;
+">
+
+  <div style="
+  width:min(1200px,calc(100% - 32px));
+  margin:0 auto;
+  ">
+
+    <div class="clients-reveal" style="
+    max-width:760px;
+    margin:0 auto 38px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(36px);
+    transition:transform .8s ease, opacity .8s ease;
+    ">
+      <div style="
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#1098db;
+      margin-bottom:14px;
+      ">
+        Clients
       </div>
-      <div class="modal-body">
-        <div class="modal-image-container">
-          <img id="modal-product-image" src="" alt="Product Image" />
-          <img id="modal-product-secondary-image" src="" alt="Secondary Product Image" />
+
+      <h2 style="
+      margin:0;
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.08;
+      letter-spacing:-0.03em;
+      color:#102033;
+      ">
+        Trusted by institutions, public sector organisations and established brands.
+      </h2>
+
+      <p style="
+      margin:18px 0 0;
+      font-size:18px;
+      line-height:1.8;
+      color:#607089;
+      ">
+        ACORSER has supported clients across government, higher education, industry and corporate environments.
+      </p>
+    </div>
+
+    <div class="clients-reveal" style="
+    opacity:0;
+    transform:translateY(36px);
+    transition:transform .8s ease, opacity .8s ease;
+    transition-delay:.08s;
+    ">
+
+      <div style="
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(16,24,39,0.06);
+      box-shadow:0 16px 40px rgba(16,24,39,0.06);
+      padding:26px 0;
+      ">
+
+        <div class="clients-track" style="
+        display:flex;
+        align-items:center;
+        gap:18px;
+        width:max-content;
+        animation:clientMarquee 34s linear infinite;
+        ">
+
+          <!-- set 1 -->
+          <div class="client-logo-card"><img src="images/clients/atns.png" alt="ATNS"></div>
+          <div class="client-logo-card"><img src="images/clients/sassa.png" alt="SASSA"></div>
+          <div class="client-logo-card"><img src="images/clients/sasol.png" alt="SASOL"></div>
+          <div class="client-logo-card"><img src="images/clients/cipc.png" alt="CIPC"></div>
+          <div class="client-logo-card"><img src="images/clients/stellenbosch.png" alt="University of Stellenbosch"></div>
+          <div class="client-logo-card"><img src="images/clients/vodacom.png" alt="Vodacom"></div>
+          <div class="client-logo-card"><img src="images/clients/anglogold.png" alt="AngloGold Ashanti"></div>
+          <div class="client-logo-card"><img src="images/clients/liberty.png" alt="Liberty"></div>
+          <div class="client-logo-card"><img src="images/clients/mondi.png" alt="Mondi"></div>
+          <div class="client-logo-card"><img src="images/clients/picknpay.png" alt="Pick n Pay"></div>
+          <div class="client-logo-card"><img src="images/clients/dbsa.png" alt="Development Bank of South Africa"></div>
+          <div class="client-logo-card"><img src="images/clients/labour.png" alt="Department of Labour"></div>
+
+          <!-- duplicate set for seamless loop -->
+          <div class="client-logo-card"><img src="images/clients/atns.png" alt="ATNS"></div>
+          <div class="client-logo-card"><img src="images/clients/sassa.png" alt="SASSA"></div>
+          <div class="client-logo-card"><img src="images/clients/sasol.png" alt="SASOL"></div>
+          <div class="client-logo-card"><img src="images/clients/cipc.png" alt="CIPC"></div>
+          <div class="client-logo-card"><img src="images/clients/stellenbosch.png" alt="University of Stellenbosch"></div>
+          <div class="client-logo-card"><img src="images/clients/vodacom.png" alt="Vodacom"></div>
+          <div class="client-logo-card"><img src="images/clients/anglogold.png" alt="AngloGold Ashanti"></div>
+          <div class="client-logo-card"><img src="images/clients/liberty.png" alt="Liberty"></div>
+          <div class="client-logo-card"><img src="images/clients/mondi.png" alt="Mondi"></div>
+          <div class="client-logo-card"><img src="images/clients/picknpay.png" alt="Pick n Pay"></div>
+          <div class="client-logo-card"><img src="images/clients/dbsa.png" alt="Development Bank of South Africa"></div>
+          <div class="client-logo-card"><img src="images/clients/labour.png" alt="Department of Labour"></div>
+
         </div>
-        <div class="modal-description">
-          <h3>Product Description</h3>
-          <p id="modal-product-description"></p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a id="modal-order-button" class="btn" href="#">Order Now</a>
       </div>
     </div>
   </div>
 
-  <a class="floating-whatsapp" href="https://wa.me/27799392702" target="_blank">
-    <i class="fab fa-whatsapp"></i> Chat to us
-  </a>
+  <style>
+    @keyframes clientMarquee{
+      0%{
+        transform:translateX(0);
+      }
+      100%{
+        transform:translateX(-50%);
+      }
+    }
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    #clients .clients-reveal.is-visible{
+      opacity:1 !important;
+      transform:translateY(0) !important;
+    }
+
+    #clients .client-logo-card{
+      flex:0 0 auto;
+      width:180px;
+      height:96px;
+      border-radius:20px;
+      background:#ffffff;
+      border:1px solid rgba(16,24,39,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px 22px;
+      box-shadow:0 10px 24px rgba(16,24,39,0.04);
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+
+    #clients .client-logo-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 30px rgba(16,24,39,0.08);
+    }
+
+    #clients .client-logo-card img{
+      max-width:100%;
+      max-height:46px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      filter:grayscale(100%);
+      opacity:.86;
+      transition:filter .3s ease, opacity .3s ease, transform .3s ease;
+    }
+
+    #clients .client-logo-card:hover img{
+      filter:grayscale(0%);
+      opacity:1;
+      transform:scale(1.04);
+    }
+
+    #clients .clients-track:hover{
+      animation-play-state:paused;
+    }
+
+    @media (max-width:768px){
+      #clients{
+        padding:72px 0 !important;
+      }
+
+      #clients .client-logo-card{
+        width:150px !important;
+        height:84px !important;
+        border-radius:18px !important;
+        padding:14px 18px !important;
+      }
+
+      #clients .client-logo-card img{
+        max-height:38px !important;
+      }
+
+      #clients .clients-track{
+        gap:14px !important;
+        animation-duration:26s !important;
+      }
+    }
+  </style>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const clientItems = document.querySelectorAll('#clients .clients-reveal');
+
+  const clientObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        clientObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  clientItems.forEach(function(item){
+    clientObserver.observe(item);
+  });
+});
+</script>
+
+
+<section id="contact" style="
+position:relative;
+padding:90px 0;
+background:
+linear-gradient(rgba(8,17,29,0.85), rgba(8,17,29,0.9)),
+url('images/contact-bg.jpg') center/cover no-repeat;
+color:#ffffff;
+overflow:hidden;
+">
+
+<div style="
+width:min(1200px,calc(100% - 32px));
+margin:0 auto;
+">
+
+<!-- HEADER -->
+
+<div class="contact-reveal" style="
+text-align:center;
+max-width:760px;
+margin:0 auto 50px;
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+">
+
+<div style="
+font-size:12px;
+font-weight:800;
+letter-spacing:.22em;
+text-transform:uppercase;
+color:#9edcff;
+margin-bottom:14px;">
+Contact
+</div>
+
+<h2 style="
+margin:0;
+font-size:clamp(2rem,4vw,2.8rem);
+line-height:1.1;">
+Let’s discuss how ACORSER can support your organisation.
+</h2>
+
+<p style="
+margin-top:16px;
+font-size:17px;
+line-height:1.8;
+color:rgba(255,255,255,0.85);">
+Get in touch with our team for research, advisory, compliance or training enquiries.
+</p>
+
+</div>
+
+
+
+<!-- GRID -->
+
+<div class="contact-grid" style="
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:36px;
+align-items:stretch;
+">
+
+
+
+<!-- CONTACT INFO -->
+
+<div class="contact-reveal contact-info" style="
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.14);
+border-radius:26px;
+padding:36px;
+backdrop-filter:blur(8px);
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+">
+
+<h3 style="
+margin:0 0 20px;
+font-size:24px;">
+Johannesburg Office
+</h3>
+
+<div style="
+font-size:16px;
+line-height:1.85;
+color:rgba(255,255,255,0.85);
+">
+
+<strong>Address</strong><br>
+2nd Floor Orion House<br>
+49 Jorrissen Street<br>
+Braamfontein – Johannesburg 2000<br>
+Gauteng Province, South Africa<br><br>
+
+<strong>Email</strong><br>
+info@acorser.co.za<br>
+consult@acorser.co.za<br><br>
+
+<strong>Telephone</strong><br>
+(+27) 11 039 1377<br>
+Fax: (+27) 86 568 4730
+
+</div>
+
+</div>
+
+
+
+<!-- FORM -->
+
+<div class="contact-reveal contact-form" style="
+background:#ffffff;
+border-radius:26px;
+padding:36px;
+box-shadow:0 18px 50px rgba(0,0,0,0.25);
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+">
+
+<h3 style="
+margin:0 0 22px;
+font-size:22px;
+color:#102033;">
+Send an enquiry
+</h3>
+
+<form>
+
+<div class="form-grid" style="display:grid;gap:16px;">
+
+<input type="text" placeholder="Your name" class="contact-input">
+
+<input type="email" placeholder="Email address" class="contact-input">
+
+<input type="text" placeholder="Organisation (optional)" class="contact-input">
+
+<textarea placeholder="Message" rows="4" class="contact-input"></textarea>
+
+<button class="contact-button">
+Send Message
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+</div>
+
+
+
+<style>
+
+/* animation */
+
+#contact .contact-reveal.is-visible{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+
+/* inputs */
+
+#contact .contact-input{
+width:100%;
+height:50px;
+padding:0 16px;
+border-radius:12px;
+border:1px solid rgba(16,24,39,0.12);
+font-size:15px;
+outline:none;
+}
+
+#contact textarea.contact-input{
+height:auto;
+padding:14px 16px;
+resize:none;
+}
+
+
+/* button */
+
+#contact .contact-button{
+height:50px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#1098db,#4a46a3);
+color:#ffffff;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+box-shadow:0 10px 24px rgba(16,152,219,0.25);
+transition:.25s;
+}
+
+#contact .contact-button:hover{
+transform:translateY(-2px);
+}
+
+
+/* TABLET */
+
+@media(max-width:980px){
+
+#contact .contact-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:640px){
+
+#contact{
+padding:70px 0;
+}
+
+#contact .contact-info,
+#contact .contact-form{
+padding:26px;
+border-radius:20px;
+}
+
+#contact h2{
+font-size:1.8rem !important;
+}
+
+#contact .contact-input{
+height:48px;
+font-size:16px;
+}
+
+#contact textarea.contact-input{
+font-size:16px;
+}
+
+#contact .contact-button{
+height:52px;
+font-size:16px;
+}
+
+}
+
+@media (max-width: 768px){
+
+  #contact .contact-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+  }
+
+  #contact .contact-grid > div{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  #contact .contact-info,
+  #contact .contact-form{
+    width:100% !important;
+    max-width:100% !important;
+    padding:22px !important;
+    border-radius:20px !important;
+    overflow:hidden !important;
+  }
+
+  #contact form,
+  #contact .form-grid{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  #contact .contact-input,
+  #contact textarea.contact-input,
+  #contact .contact-button{
+    width:100% !important;
+    max-width:100% !important;
+    display:block !important;
+  }
+
+  #contact h2{
+    font-size:1.8rem !important;
+  }
+
+  #contact h3{
+    font-size:20px !important;
+  }
+}
+
+</style>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const items=document.querySelectorAll("#contact .contact-reveal");
+
+const observer=new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+entry.target.classList.add("is-visible");
+observer.unobserve(entry.target);
+}
+
+});
+
+},{threshold:.2});
+
+items.forEach(function(el){
+observer.observe(el);
+});
+
+});
+</script>
+
+
+
+    <footer style="background:#07111d; color:#ffffff; padding:72px 0 36px;">
+      <div style="width:min(1200px, calc(100% - 32px)); margin:0 auto; display:grid; grid-template-columns:1.2fr 0.8fr 0.8fr 1fr; gap:28px;" class="footer-grid">
+        <div>
+          <img src="images/footer.png" alt="ACORSER logo" style="height:155px; width:auto; object-fit:contain; margin-bottom:16px;" />
+          <p style="margin:0; font-size:15px; line-height:1.9; color:rgba(255,255,255,0.76); max-width:360px;">A South African advisory and training firm with regional representative interests across Africa, serving public institutions, universities, corporates, and specialised industry clients.</p>
+        </div>
+        <div>
+          <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">Site Links</div>
+          <div style="display:grid; gap:12px; font-size:15px; color:rgba(255,255,255,0.82);">
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+  <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">
+    Divisions
+  </div>
+
+  <!-- SERVICE LINKS -->
+  <div style="display:grid; gap:12px; font-size:15px; color:rgba(255,255,255,0.82); margin-bottom:18px;">
+    <a href="advisory.html">Research & Advisory</a>
+    <a href="law-firm.html">Legal & Compliance</a>
+    <a href="academy.html">Acorser Academy</a>
+  </div>
+
+  <!-- SOCIAL ICONS -->
+  <div style="display:flex; gap:14px; font-size:18px; color:#ffffff;">
+    
+    <a href="https://x.com/AcorserConsult" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="https://www.facebook.com/acorserc" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+  </div>
+</div>
+        <div>
+          <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#9edcff; margin-bottom:16px;">Office</div>
+          <div style="font-size:15px; line-height:1.9; color:rgba(255,255,255,0.76);">Johannesburg Office<br>2nd Floor Orion House, 49 Jorrissen Street<br>Braamfontein - Johannesburg 2000<br>Gauteng Province; South Africa<br><br>info@acorser.co.za<br>consult@acorser.co.za<br>(+27) 11 039 1377<br>Fax: (+27) 86 568 4730</div>
+        </div>
+      </div>
+      <div class="footer-bottom" style="width:min(1200px, calc(100% - 32px)); margin:28px auto 0; padding-top:22px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:14px; color:rgba(255,255,255,0.58);">
+        <div>© ACORSER. All rights reserved.</div>
+        <div>Reg. No. 2010/077907/23 · Income Tax Ref No. 9279072186</div>
+      </div>
+    </footer>
+    
+  </main>
+
   <script>
-    AOS.init();
+    (function () {
+      const openBtn = document.getElementById('mobileMenuBtn');
+      const closeBtn = document.getElementById('mobileMenuClose');
+      const sidebar = document.getElementById('mobileSidebar');
+      const backdrop = document.getElementById('mobileMenuBackdrop');
+      const links = document.querySelectorAll('.mobile-link');
+
+      function openMenu() {
+        sidebar.style.transform = 'translateX(0)';
+        backdrop.style.opacity = '1';
+        backdrop.style.pointerEvents = 'auto';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        sidebar.style.transform = 'translateX(100%)';
+        backdrop.style.opacity = '0';
+        backdrop.style.pointerEvents = 'none';
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+      links.forEach((link) => link.addEventListener('click', closeMenu));
+    })();
   </script>
 </body>
 </html>
